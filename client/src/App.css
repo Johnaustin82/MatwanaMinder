@@ -45,7 +45,7 @@
   display: flex;
   justify-content: space-between;
   padding: 40px;
-  background-color: #f4f4f4;
+  background-color: lightgray; /* Light grey background color */
 }
 
 .services-half {
@@ -96,8 +96,8 @@
 
 .service-button {
   padding: 10px 20px;
-  background-color: #007bff;
-  color: white;
+  background-color: lavender;
+  color: teal;
   border: none;
   border-radius: 5px;
   cursor: pointer;
