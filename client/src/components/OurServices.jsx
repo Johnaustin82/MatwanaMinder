@@ -1,31 +1,16 @@
 import React from 'react';
 
 const services = [
-  {
-    title: 'Fleet Optimization',
-    description: 'Enhance the efficiency of your bus fleet with real-time tracking and intelligent route management, ensuring optimal performance and cost savings.',
-    icon: '🚍',
-  },
-  {
-    title: 'Seamless Booking Experience',
-    description: 'Enjoy a hassle-free booking process with our online reservation system, offering instant confirmations and easy access to your travel plans.',
-    icon: '📅',
-  },
-  {
-    title: 'Smart Ticketing Solutions',
-    description: 'Experience the convenience of digital ticketing with our automated system, designed for easy purchase, quick validation, and secure transactions.',
-    icon: '🎫',
-  },
-  {
-    title: 'Timely Bus Schedules',
-    description: 'Stay informed with real-time updates on bus schedules and route changes, ensuring you always know when and where your next ride will be.',
-    icon: '🕒',
-  },
-  {
-    title: 'Operational Hours Tracking',
-    description: 'Monitor and manage bus service hours efficiently, ensuring accurate tracking of operational times and staff schedules for improved service reliability.',
-    icon: '⏰',
-  },
+    {
+        title: 'Fleet Managment',
+        description: 'Streamline your transportation operations with advanced fleet management. Our system provides real-time insights into vehicle locations, performance metrics, and maintenance schedules, allowing you to maximize efficiency and minimize downtime. With intelligent route planning and automated reporting, you can ensure your fleet is always running at peak performance.',
+        icon: '🚍',
+      },
+      {
+        title: 'Online Booking',
+        description: 'Simplify your travel experience with our user-friendly online booking platform. Whether you are planning your daily commute or a long-distance journey, our seamless booking process ensures quick and easy reservations. With instant confirmation and the ability to manage your bookings on the go, traveling has never been more convenient.',
+        icon: '📅',
+      },
 ];
 
 const OurServices = () => {
