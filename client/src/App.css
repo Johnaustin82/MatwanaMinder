@@ -42,37 +42,70 @@
 }
 
 .our-services {
+  display: flex;
+  justify-content: space-between;
   padding: 40px;
   background-color: #f4f4f4;
+}
+
+.services-half {
+  flex: 1;
+  padding: 20px;
+}
+
+.left-half {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.matwana-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.service-description {
+  font-size: 16px;
+  color: #333;
   text-align: center;
 }
 
-.services-container {
+.right-half {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   justify-content: space-around;
+  align-items: center;
 }
 
-.service-card {
-  background-color: #ffffff;
-  padding: 20px;
-  margin: 15px;
-  width: 220px;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+.service-item {
+  text-align: center;
+  margin-bottom: 30px;
 }
 
 .service-icon {
   font-size: 40px;
-  margin-bottom: 15px;
-}
-
-.service-title {
-  font-size: 20px;
   margin-bottom: 10px;
 }
 
-.service-description {
-  font-size: 14px;
-  color: #666;
+.service-title {
+  font-size: 22px;
+  margin-bottom: 15px;
 }
+
+.service-button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.service-button:hover {
+  background-color: #0056b3;
+}
+

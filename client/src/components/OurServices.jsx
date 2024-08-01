@@ -1,30 +1,30 @@
 import React from 'react';
+import matwanaBusImage from 'https://i.pinimg.com/564x/be/d9/5f/bed95f67a0643a9dcd08b39554c52f0e.jpg';
 
-const services = [
-    {
-        title: 'Fleet Managment',
-        description: 'Streamline your transportation operations with advanced fleet management. Our system provides real-time insights into vehicle locations, performance metrics, and maintenance schedules, allowing you to maximize efficiency and minimize downtime. With intelligent route planning and automated reporting, you can ensure your fleet is always running at peak performance.',
-        icon: '🚍',
-      },
-      {
-        title: 'Online Booking',
-        description: 'Simplify your travel experience with our user-friendly online booking platform. Whether you are planning your daily commute or a long-distance journey, our seamless booking process ensures quick and easy reservations. With instant confirmation and the ability to manage your bookings on the go, traveling has never been more convenient.',
-        icon: '📅',
-      },
-];
 
 const OurServices = () => {
+  
   return (
     <section className="our-services">
-      <h2>Our Services</h2>
-      <div className="services-container">
-        {services.map((service, index) => (
-          <div className="service-card" key={index}>
-            <div className="service-icon">{service.icon}</div>
-            <h3 className="service-title">{service.title}</h3>
-            <p className="service-description">{service.description}</p>
-          </div>
-        ))}
+      <div className="services-half left-half">
+        <img src={matwanaBusImage} alt="Matwana Minder Bus Service" className="matwana-image" />
+        <p className="service-description">
+          Matwana Minder offers a reliable and efficient bus service that keeps you connected with
+          timely arrivals and safe journeys. Enjoy a seamless travel experience with real-time
+          updates and advanced booking options.
+        </p>
+      </div>
+      <div className="services-half right-half">
+        <div className="service-item">
+          <div className="service-icon">🚍</div>
+          <h3 className="service-title">Fleet Management</h3>
+          <button onClick={navigateToFleet} className="service-button">Go to Fleet</button>
+        </div>
+        <div className="service-item">
+          <div className="service-icon">📅</div>
+          <h3 className="service-title">Online Booking</h3>
+          <button onClick={navigateToBooking} className="service-button">Go to Booking</button>
+        </div>
       </div>
     </section>
   );
