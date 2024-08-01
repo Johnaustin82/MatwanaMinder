@@ -1,13 +1,14 @@
 import React from 'react';
-import matwanaBusImage from 'https://i.pinimg.com/564x/be/d9/5f/bed95f67a0643a9dcd08b39554c52f0e.jpg';
-
 
 const OurServices = () => {
-  
   return (
     <section className="our-services">
       <div className="services-half left-half">
-        <img src={matwanaBusImage} alt="Matwana Minder Bus Service" className="matwana-image" />
+        <img 
+          src="https://i.pinimg.com/236x/be/d9/5f/bed95f67a0643a9dcd08b39554c52f0e.jpg" 
+          alt="Matwana Minder Bus Service"
+          className="matwana-image"
+        />
         <p className="service-description">
           Matwana Minder offers a reliable and efficient bus service that keeps you connected with
           timely arrivals and safe journeys. Enjoy a seamless travel experience with real-time
@@ -18,12 +19,12 @@ const OurServices = () => {
         <div className="service-item">
           <div className="service-icon">🚍</div>
           <h3 className="service-title">Fleet Management</h3>
-          <button onClick={navigateToFleet} className="service-button">Go to Fleet</button>
+          <button className="service-button">Go to Fleet</button>
         </div>
         <div className="service-item">
           <div className="service-icon">📅</div>
           <h3 className="service-title">Online Booking</h3>
-          <button onClick={navigateToBooking} className="service-button">Go to Booking</button>
+          <button className="service-button">Go to Booking</button>
         </div>
       </div>
     </section>
@@ -31,3 +32,4 @@ const OurServices = () => {
 };
 
 export default OurServices;
+
