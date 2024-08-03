@@ -1,0 +1,101 @@
+.about-us-background {
+    background-image: url('https://i.pinimg.com/236x/ee/9f/84/ee9f846dbf9f5520df0ce9893e2882df.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  .about-us-container {
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 800px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  h2 {
+    color: #2c3e50;
+    text-align: center;
+  }
+  
+  .top-section {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .tagline {
+    color: #16a085;
+    font-size: 1.2em;
+  }
+  
+  .bottom-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .text-container {
+    flex: 1;
+    margin-right: 20px;
+  }
+  
+  .cartoon-bus-image {
+    max-width: 45%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  .description {
+    font-size: 1em;
+    color: #34495e;
+    line-height: 1.6;
+  }
+  
+  .services-section {
+    margin-top: 40px;
+  }
+  
+  .services-title {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .services-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  .service-card {
+    background-color: #b2c6db;
+    padding: 20px;
+    border-radius: 10px;
+    width: 30%;
+    text-align: center;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .service-icon {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #020504;
+  }
+  
+  .service-card h3 {
+    margin-bottom: 10px;
+    color: #2c3e50;
+  }
+  
+  .service-card p {
+    margin: 0;
+    color: #34495e;
+  }
