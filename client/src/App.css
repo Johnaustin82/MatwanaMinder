@@ -150,13 +150,15 @@
 .fleet-buttons {
   padding: 16px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center; /* Center align the button groups */
+  gap: 60px; /* Space between the groups */
 }
 
 .button-group-left,
 .button-group-right {
   display: flex;
   flex-direction: column;
+  gap: 10px; /* Space between buttons in each group */
 }
 
 .fleet-button {
