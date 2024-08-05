@@ -1,5 +1,5 @@
 import React from "react";
-import "../App.css";// Assuming you're using CSS for styling
+import "../App.css"; // Assuming you're using CSS for styling
 
 const Fleet = () => {
   return (
@@ -10,6 +10,9 @@ const Fleet = () => {
           alt="Fleet"
           className="image"
         />
+        <div className="fleet-text">
+          MANAGE YOUR FLEET WITH US
+        </div>
       </div>
       <div className="fleet-buttons">
         <div className="button-group-left">
@@ -26,3 +29,4 @@ const Fleet = () => {
 };
 
 export default Fleet;
+
