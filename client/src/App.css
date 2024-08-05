@@ -130,9 +130,6 @@
 }
 
 .fleet-card {
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   margin-bottom: 20px;
 }
@@ -148,7 +145,6 @@
   width: 60%; /* Adjust the width to suit your needs */
   height: 600px; /* Set a fixed height */
   object-fit: cover; /* Ensure the image covers the area while maintaining aspect ratio */
-  border-bottom: 1px solid white;
 }
 
 .fleet-buttons {
