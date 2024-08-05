@@ -13,8 +13,8 @@ const Fleet = () => {
       </div>
       <div className="fleet-buttons">
         <div className="button-group-left">
-          <button className="fleet-button">Button 1</button>
-          <button className="fleet-button">Button 2</button>
+          <button className="fleet-button">Add a Matatu</button>
+          <button className="fleet-button">Edit your matatu details</button>
         </div>
         <div className="button-group-right">
           <button className="fleet-button">Button 3</button>
