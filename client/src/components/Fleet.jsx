@@ -6,7 +6,7 @@ const Fleet = () => {
     <div className="fleet-container">
       <div className="fleet-image">
         <img
-          src="your-image-url.jpg"
+          src="https://i.pinimg.com/564x/c3/e6/02/c3e60200bdb67f86120738d30d35ca73.jpg"
           alt="Fleet"
           className="image"
         />
