@@ -124,20 +124,21 @@
 .fleet-image {
   width: 100%;
   display: flex;
-  justify-content: center; /* Center the image horizontally */
-  padding: 20px 0; /* Add padding to create space around the image */
-  position: relative; /* Ensure text can be absolutely positioned */
+  justify-content: center;
+  position: relative;
+  padding: 20px 0;
 }
 
 .fleet-image img {
-  width: 60%; /* Adjust the image width to a medium size */
-  height: auto; /* Maintain aspect ratio */
+  width: 60%; /* Keep the width of the image at 60% of the container */
+  height: 300px; /* Set a fixed height for the image */
+  object-fit: cover; /* Ensure the image covers the area while maintaining aspect ratio */
   border-bottom: 1px solid white;
 }
 
 .fleet-text {
   position: absolute;
-  top: 10px; /* Position text near the top of the image */
+  top: 10px;
   left: 50%;
   transform: translateX(-50%);
   color: white;
@@ -147,7 +148,7 @@
   background: rgba(0, 0, 0, 0.4);
   padding: 5px 10px;
   border-radius: 5px;
-  z-index: 10; /* Ensure the text appears above the image */
+  z-index: 10;
 }
 
 .fleet-buttons {
@@ -177,3 +178,4 @@
 .fleet-button:hover {
   background-color: #0056b3;
 }
+
