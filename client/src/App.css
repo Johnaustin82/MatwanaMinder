@@ -110,43 +110,52 @@
 }
 
 .fleet-container {
+  max-width: 600px;
+  margin: 20px auto;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
   display: flex;
   flex-direction: column;
-  height: 100vh;
-  background-color:white;
+  background-color: #f8f8f8;
 }
 
 .fleet-image {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: white; /* Light grey background */
+  width: 100%;
+  height: auto;
 }
 
-
-.image {
+.fleet-image img {
   width: 100%;
-  height: 80%;
-  object-fit: cover;
+  height: auto;
+  border-bottom: 1px solid #ccc;
 }
 
 .fleet-buttons {
+  padding: 16px;
   display: flex;
   justify-content: space-between;
-  padding: 20px;
 }
 
 .button-group-left,
 .button-group-right {
   display: flex;
-  gap: 10px;
+  flex-direction: column;
 }
 
 .fleet-button {
-  padding: 10px 20px;
+  margin: 8px 0;
+  padding: 10px;
   font-size: 16px;
   cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: white;
+  transition: background-color 0.3s;
 }
 
-
+.fleet-button:hover {
+  background-color: #0056b3;
+}
