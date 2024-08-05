@@ -4,6 +4,9 @@ import "../App.css"; // Assuming you're using CSS for styling
 const Fleet = () => {
   return (
     <div className="fleet-container">
+      <div className="fleet-text-container">
+        <h2 className="fleet-text">MANAGE YOUR FLEET WITH US</h2>
+      </div>
       <div className="fleet-card">
         <div className="fleet-image">
           <img
@@ -11,7 +14,6 @@ const Fleet = () => {
             alt="Fleet"
             className="image"
           />
-          <div className="fleet-text">MANAGE YOUR FLEET WITH US</div>
         </div>
       </div>
       <div className="fleet-buttons">
@@ -29,5 +31,6 @@ const Fleet = () => {
 };
 
 export default Fleet;
+
 
 
