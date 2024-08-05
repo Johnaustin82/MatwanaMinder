@@ -4,14 +4,14 @@ import "../App.css"; // Assuming you're using CSS for styling
 const Fleet = () => {
   return (
     <div className="fleet-container">
-      <div className="fleet-image">
-        <img
-          src="https://i.pinimg.com/564x/c3/e6/02/c3e60200bdb67f86120738d30d35ca73.jpg"
-          alt="Fleet"
-          className="image"
-        />
-        <div className="fleet-text">
-          MANAGE YOUR FLEET WITH US
+      <div className="fleet-card">
+        <div className="fleet-image">
+          <img
+            src="https://i.pinimg.com/564x/c3/e6/02/c3e60200bdb67f86120738d30d35ca73.jpg"
+            alt="Fleet"
+            className="image"
+          />
+          <div className="fleet-text">MANAGE YOUR FLEET WITH US</div>
         </div>
       </div>
       <div className="fleet-buttons">
@@ -29,4 +29,5 @@ const Fleet = () => {
 };
 
 export default Fleet;
+
 
