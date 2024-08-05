@@ -109,3 +109,43 @@
   background-color: #0056b3;
 }
 
+.fleet-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.fleet-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0; /* Light grey background */
+}
+
+
+.image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.fleet-buttons {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.button-group-left,
+.button-group-right {
+  display: flex;
+  gap: 10px;
+}
+
+.fleet-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+
