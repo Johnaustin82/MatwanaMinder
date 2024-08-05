@@ -113,6 +113,7 @@
   display: flex;
   flex-direction: column;
   height: 100vh;
+  background-color: #f0f0f0;
 }
 
 .fleet-image {
@@ -120,13 +121,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #f0f0f0; /* Light grey background */
+  background-color: white; /* Light grey background */
 }
 
 
 .image {
   width: 100%;
-  height: auto;
+  height: 80%;
   object-fit: cover;
 }
 
