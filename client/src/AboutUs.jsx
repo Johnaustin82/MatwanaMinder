@@ -10,10 +10,6 @@ const services = [
     title: 'Fleet Management',
     description: 'Manage your fleet efficiently with our comprehensive tools.',
   },
-  {
-    title: 'Schedule Tracking',
-    description: 'Track schedules and routes for the most convenient travel options.',
-  },
 ];
 
 const AboutUs = () => {
@@ -30,7 +26,6 @@ const AboutUs = () => {
               Matwana Minder offers a robust platform that revolutionizes the way transportation services are managed and utilized. Passengers can easily book tickets online for their preferred vehicles, view detailed schedules, and check routes to find the most convenient options for their travel needs. For operators, the system provides a comprehensive suite of tools to manage their fleet efficiently. Operators can add, update, and monitor their vehicles from any location, ensuring seamless operations and optimal vehicle utilization. Our solution aims to enhance the overall experience for both passengers and operators, making transportation management smarter and more accessible.
             </p>
           </div>
-
         </div>
         <div className="services-section">
           <h2 className="services-title">Our Services</h2>
@@ -42,6 +37,13 @@ const AboutUs = () => {
               </div>
             ))}
           </div>
+        </div>
+        <div className="contact-us-section">
+          <h2>Contact Us</h2>
+          <p>If you have any questions or need further information, please feel free to contact us at:</p>
+          <p>Email: info@matwanaminder.com</p>
+          <p>Phone: +123 456 7890</p>
+          <p>Address: 123 Transport Lane, Nairobi, Kenya</p>
         </div>
       </div>
     </div>
