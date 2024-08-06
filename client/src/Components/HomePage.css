@@ -1,0 +1,32 @@
+.home-page {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .content {
+    flex: 1;
+    padding: 50px;
+  }
+  
+  .image-container {
+    flex: 0 0 300px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .image-container img {
+    max-width: 500%;
+    height: auto;
+    border-radius: 0px; 
+  }
+  content h1 {
+    font-size: 2.5em; /* Adjust as needed */
+  }
+  
+  .content p {
+    font-size: 1.2em; 
+
+  }
