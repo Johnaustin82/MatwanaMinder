@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import './BookingForm.css';
 
@@ -6,10 +5,12 @@ const BookingForm = ({ bus, onClose }) => {
     const [from, setFrom] = useState('');
     const [to, setTo] = useState('');
     const [travelDate, setTravelDate] = useState('');
+    const [travelTime, setTravelTime] = useState(''); // Change to travelTime
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        alert(`Booking Details:\nFrom: ${from}\nTo: ${to}\nTravel Date: ${travelDate}\nReturn Date: ${returnDate}`);
+        alert(`Booking Details:\nFrom: ${from}\nTo: ${to}\nTravel Date: ${travelDate}\nTravel Time: ${travelTime}`);
+        alert('Successfully booked ticket!');
         onClose();
     };
 
@@ -23,7 +24,9 @@ const BookingForm = ({ bus, onClose }) => {
                 <input type="text" id="to" value={to} onChange={(e) => setTo(e.target.value)} required />
                 <label htmlFor="travelDate">Travelling On:</label>
                 <input type="date" id="travelDate" value={travelDate} onChange={(e) => setTravelDate(e.target.value)} required />
-                <button type="button" className="close-btn" onClick={onClose}>Book Ticket</button>
+                <label htmlFor="travelTime">Travel Time:</label>
+                <input type="time" id="travelTime" value={travelTime} onChange={(e) => setTravelTime(e.target.value)} required />
+                <button type="submit">Submit</button> {/* Change to submit button */}
             </form>
         </div>
     );
