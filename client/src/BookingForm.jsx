@@ -6,7 +6,7 @@ const BookingForm = ({ bus, onClose }) => {
     const [from, setFrom] = useState('');
     const [to, setTo] = useState('');
     const [travelDate, setTravelDate] = useState('');
-    
+
     const handleSubmit = (event) => {
         event.preventDefault();
         alert(`Booking Details:\nFrom: ${from}\nTo: ${to}\nTravel Date: ${travelDate}\nReturn Date: ${returnDate}`);
@@ -23,7 +23,7 @@ const BookingForm = ({ bus, onClose }) => {
                 <input type="text" id="to" value={to} onChange={(e) => setTo(e.target.value)} required />
                 <label htmlFor="travelDate">Travelling On:</label>
                 <input type="date" id="travelDate" value={travelDate} onChange={(e) => setTravelDate(e.target.value)} required />
-                <button type="button" className="close-btn" onClick={onClose}>Cancel</button>
+                <button type="button" className="close-btn" onClick={onClose}>Book Ticket</button>
             </form>
         </div>
     );

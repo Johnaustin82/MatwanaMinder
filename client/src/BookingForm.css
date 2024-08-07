@@ -1,0 +1,58 @@
+
+.form-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid #ccc;
+    padding: 20px;
+    background: rgb(149, 204, 228); /* Change the background color */
+    z-index: 1000;
+    width: 300px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+.form-popup form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-popup label {
+    margin-top: 10px;
+}
+
+.form-popup input {
+    margin: 5px 0;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+}
+
+.form-popup button {
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.form-popup button[type="submit"] {
+    background-color: #ffa726;
+    color: white;
+}
+
+.form-popup button[type="submit"]:hover {
+    background-color: #fb8c00;
+}
+
+.form-popup .close-btn {
+    background-color: #f44336;
+    color: white;
+}
+
+.form-popup .close-btn:hover {
+    background-color: #d32f2f;
+}

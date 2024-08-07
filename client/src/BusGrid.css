@@ -1,14 +1,19 @@
-
+/* BusGrid.css */
 .bus-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    gap: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Adjust the minmax value to make the items larger */
+    gap: 20px; /* Increase the gap between items */
     padding: 20px;
 }
 
 .bus-item {
     cursor: pointer;
     text-align: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #1184ccea; /* Add a light background color */
+    transition: transform 0.3s ease; /* Add a hover effect */
 }
 
 .bus-item img {
@@ -19,5 +24,9 @@
 .bus-item h3 {
     margin: 10px 0;
     color: #333;
+}
+
+.bus-item:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
 }
 

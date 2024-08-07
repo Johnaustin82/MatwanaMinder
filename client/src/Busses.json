@@ -38,7 +38,50 @@
         "seats": 14,
         "availableSeats": 75,
         "routes": ["Route 10", "Route 11", "Route 12"]
+    },
+
+    {
+        "id":5,
+        "name": "Bus 5",
+        "image": "https://i.pinimg.com/736x/94/82/34/9482340d90807c61d4e48e6c813480a6.jpg",
+        "price": "ksh 300",
+        "seats": 20,
+        "availableSeats": 50,
+        "routes": ["Route 13", "Route 14", "Route 15"]
+
+    },
+
+    {
+        "id":6,
+        "name": "Bus 6",
+        "image": "https://i.pinimg.com/564x/c1/aa/2c/c1aa2c6a16f556cc182e4a95d063c074.jpg",
+        "price": "ksh 350",
+        "seats": 30,
+        "availableSeats": 45,
+        "routes": ["Route 16", "Route 17", "Route 18"]
+    },
+
+    {
+        "id":7,
+        "name": "Bus 7",
+        "image": "https://i.pinimg.com/236x/12/9b/fc/129bfcb191fba53624a7fbb76ac3b6ac.jpg",
+        "price": "ksh 400",
+        "seats": 40,
+        "availableSeats": 30,
+        "routes": ["Route 19", "Route 20", "Route 21"]
+    },
+    
+    {
+        "id":8,
+        "name": "Bus 8",
+        "image": "https://i.pinimg.com/236x/78/46/07/784607127ab7565db070fec88c0c462a.jpg",
+        "price": "ksh 450",
+        "seats": 50,
+        "availableSeats": 25,
+        "routes": ["Route 22", "Route 23", "Route 24"]
     }
+
+
 
 
 
