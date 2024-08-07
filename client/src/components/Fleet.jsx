@@ -1,5 +1,5 @@
 import React from "react";
-import "../App.css"; // Assuming you're using CSS for styling
+import "./Fleet.css"; // Assuming you're using CSS for styling
 
 const Fleet = () => {
   return (
