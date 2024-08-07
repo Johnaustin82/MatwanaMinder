@@ -21,8 +21,6 @@ with app.app_context():
     # Seed Users
     users = [
         User(name=fake.name(), email=fake.email(), password=bcrypt.generate_password_hash(fake.password()).decode('utf-8'), role='passenger'),
-        User(name=fake.name(), email=fake.email(), password=bcrypt.generate_password_hash(fake.password()).decode('utf-8'), role='driver'),
-        User(name=fake.name(), email=fake.email(), password=bcrypt.generate_password_hash(fake.password()).decode('utf-8'), role='conductor'),
         User(name=fake.name(), email=fake.email(), password=bcrypt.generate_password_hash(fake.password()).decode('utf-8'), role='operator')
     ]
     db.session.add_all(users)
