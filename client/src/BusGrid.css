@@ -1,0 +1,23 @@
+
+.bus-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 10px;
+    padding: 20px;
+}
+
+.bus-item {
+    cursor: pointer;
+    text-align: center;
+}
+
+.bus-item img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.bus-item h3 {
+    margin: 10px 0;
+    color: #333;
+}
+

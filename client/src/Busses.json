@@ -1,0 +1,46 @@
+[
+    {
+        "id": 1,
+        "name": "Bus 1",
+        "image": "https://i.pinimg.com/236x/3b/d2/c4/3bd2c4a84ac0c79c9a9a73ffef7c37c6.jpg",
+        "price": "ksh 100",
+        "seats": 50,
+        "availableSeats": 40,
+        "routes": ["Route 1", "Route 2", "Route 3"]
+    },
+
+    {
+        "id": 2,
+        "name": "Bus 2",
+        "image": "https://i.pinimg.com/236x/e9/c7/d8/e9c7d896c7037b9ad5c7cebc4588ff3b.jpg",
+        "price": "ksh 150",
+        "seats": 30,
+        "availableSeats": 55,
+        "routes": ["Route 4", "Route 5", "Route 6"]
+    },
+
+    {
+        "id": 3,
+        "name": "Bus 3",
+        "image": "https://i.pinimg.com/236x/3d/78/08/3d7808b3510dd42025f78373a0936f72.jpg",
+        "price": "ksh 200",
+        "seats": 70,
+        "availableSeats": 65,
+        "routes": ["Route 7", "Route 8", "Route 9"]
+    },
+
+
+    {
+        "id": 4,
+        "name": "Bus 4",
+        "image": "https://i.pinimg.com/236x/1a/d8/e2/1ad8e21d357ee2aa13f0f1e3bc5d26eb.jpg",
+        "price": "ksh 250",
+        "seats": 14,
+        "availableSeats": 75,
+        "routes": ["Route 10", "Route 11", "Route 12"]
+    }
+
+
+
+
+]
