@@ -1,0 +1,31 @@
+.home-page {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .content {
+    flex: 1;
+    padding: 50px;
+  }
+  
+  .image-container {
+    flex: 0 0 300px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .image-container {
+    flex: 1; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500%; 
+  }
+  
+  .content p {
+    font-size: 6.2em; 
+
+  }
