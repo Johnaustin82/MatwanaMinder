@@ -1,8 +1,7 @@
-
 import React, { useState } from 'react';
 import BookingForm from './BookingForm';
 import './BusGrid.css';
-import busData from './Busses.json';
+import busData from '../Busses.json';
 
 const BusGrid = () => {
     const [selectedBus, setSelectedBus] = useState(null);
