@@ -7,8 +7,7 @@ const ProfilePage = () => {
         phone: '123-456-7890',
         email: 'johndoe@example.com',
         age: '30',
-        location: 'New York, USA',
-        photo: 'https://via.placeholder.com/100'
+        location: 'New York, USA'
     });
 
     const [isEditing, setIsEditing] = useState(false);
@@ -18,17 +17,6 @@ const ProfilePage = () => {
         setProfile({ ...profile, [name]: value });
     };
 
-    const handlePhotoChange = (e) => {
-        const file = e.target.files[0];
-        if (file) {
-            const reader = new FileReader();
-            reader.onload = (e) => {
-                setProfile({ ...profile, photo: e.target.result });
-            };
-            reader.readAsDataURL(file);
-        }
-    };
-
     const handleEditToggle = () => {
         setIsEditing(!isEditing);
     };
@@ -36,26 +24,21 @@ const ProfilePage = () => {
     const handleSave = (e) => {
         e.preventDefault();
         setIsEditing(false);
-        // Add logic to save the profile details to your backend here
         console.log('Profile saved:', profile);
+        // Here you would typically also update the profile on the server
     };
 
     return (
         <div className="profile-container">
             <div className="sidebar">
-                <div className="profile-picture">
-                    <img src={profile.photo} alt="Profile" />
-                    {isEditing && <input type="file" onChange={handlePhotoChange} />}
-                </div>
                 <button onClick={handleEditToggle}>
                     {isEditing ? 'Cancel' : 'Edit Profile'}
                 </button>
-                {isEditing && <button onClick={handleSave}>Save</button>}
             </div>
             <div className="profile-details">
                 <form onSubmit={handleSave}>
                     <label>
-                        Name
+                        Name:
                         <input
                             type="text"
                             name="name"
@@ -64,8 +47,9 @@ const ProfilePage = () => {
                             readOnly={!isEditing}
                         />
                     </label>
+                    <br />
                     <label>
-                        Phone
+                        Phone:
                         <input
                             type="text"
                             name="phone"
@@ -74,8 +58,9 @@ const ProfilePage = () => {
                             readOnly={!isEditing}
                         />
                     </label>
+                    <br />
                     <label>
-                        Email
+                        Email:
                         <input
                             type="email"
                             name="email"
@@ -84,8 +69,9 @@ const ProfilePage = () => {
                             readOnly={!isEditing}
                         />
                     </label>
+                    <br />
                     <label>
-                        Age
+                        Age:
                         <input
                             type="number"
                             name="age"
@@ -94,8 +80,9 @@ const ProfilePage = () => {
                             readOnly={!isEditing}
                         />
                     </label>
+                    <br />
                     <label>
-                        Location
+                        Location:
                         <input
                             type="text"
                             name="location"
@@ -104,13 +91,20 @@ const ProfilePage = () => {
                             readOnly={!isEditing}
                         />
                     </label>
+                    <br />
                     {isEditing && <button type="submit">Save</button>}
                 </form>
+                <div className="profile-summary">
+                    <h3>Profile Summary:</h3>
+                    <p>Name: {profile.name}</p>
+                    <p>Phone: {profile.phone}</p>
+                    <p>Email: {profile.email}</p>
+                    <p>Age: {profile.age}</p>
+                    <p>Location: {profile.location}</p>
+                </div>
             </div>
         </div>
     );
 };
 
 export default ProfilePage;
-            
-               
