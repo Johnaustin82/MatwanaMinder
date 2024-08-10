@@ -1,8 +1,23 @@
+/* Full-page background */
+/* .background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
 /* Basic reset and full viewport height */
 html, body {
     margin: 0;
     padding: 0;
     height: 100%;
+    background-image: url('../assets/highway-forest-tree-spring.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1;
+} */
+
+/* Login section styling */
+.login {
+    text-align: center;
     width: 100%;
     font-family: 'Arial', sans-serif;
   }

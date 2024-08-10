@@ -1,0 +1,103 @@
+.about-us-background {
+    /* background-image: url('https://i.pinimg.com/236x/ee/9f/84/ee9f846dbf9f5520df0ce9893e2882df.jpg'); */
+    /* background-color: lightblue; */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  .about-us-container {
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 800px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  h2 {
+    color: #2c3e50;
+    text-align: center;
+  }
+  
+  .top-section {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .tagline {
+    color: black;
+    font-size: 1.2em;
+  }
+  
+  .bottom-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .text-container {
+    flex: 1;
+    margin-right: 20px;
+  }
+  
+  .description {
+    font-size: 1em;
+    color: #34495e;
+    line-height: 1.6;
+  }
+  
+  .services-section {
+    margin-top: 40px;
+    text-align: center;
+  }
+  
+  .services-title {
+    color: #2c3e50;
+    margin-bottom: 20px;
+  }
+  
+  .services-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  .service-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px;
+    max-width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .service-card h3 {
+    color: #2c3e50;
+  }
+  
+  .service-card p {
+    color: #34495e;
+  }
+  
+  .contact-us-section {
+    margin-top: 40px;
+    text-align: center;
+  }
+  
+  .contact-us-section h2 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+  }
+  
+  .contact-us-section p {
+    font-size: 1em;
+    color: #34495e;
+    margin: 5px 0;
+  }
