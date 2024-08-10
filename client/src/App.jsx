@@ -11,8 +11,19 @@ function App() {
   return (
     <>
      <div>
-       {/* <AboutUs/>  */}
-       <BusGrid /> 
+     <Router>
+      <Routes>
+        <Route path="/" element={<LoginForm />} />
+        <Route path="/Signup" element={<SignupForm/>} />
+        <Route path="/" element={<SignupForm/>} />
+        <Route path='/homepage'element={<HomePage/>}/>
+        <Route path='/About'element={<AboutUs/>}/>
+        <Route path='/services'element={<OurServices/>}/>
+        <Route path='/fleet'element={<Fleet/>}/>
+        <Route path='/booking'element={<BusGrid/>}/>
+
+      </Routes>
+    </Router>
      </div>
     </>
   )

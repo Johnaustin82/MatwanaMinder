@@ -1,5 +1,6 @@
 .about-us-background {
-    background-image: url('https://i.pinimg.com/236x/ee/9f/84/ee9f846dbf9f5520df0ce9893e2882df.jpg');
+    /* background-image: url('https://i.pinimg.com/236x/ee/9f/84/ee9f846dbf9f5520df0ce9893e2882df.jpg'); */
+    /* background-color: lightblue; */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -29,7 +30,7 @@
   }
   
   .tagline {
-    color: #16a085;
+    color: black;
     font-size: 1.2em;
   }
   

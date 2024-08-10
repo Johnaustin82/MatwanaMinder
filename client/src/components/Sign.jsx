@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './sign.css'
+
 const SignupForm = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -9,6 +10,7 @@ const SignupForm = () => {
   });
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
+
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -85,6 +87,7 @@ const SignupForm = () => {
         {loading ? 'Signing up...' : 'Sign Up'}
       </button>
       {error && <p style={{ color: 'red' }}>{error}</p>}
+      
     </form>
     </div>
   );
