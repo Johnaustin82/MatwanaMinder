@@ -2,16 +2,35 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
- import AboutUs from './AboutUs'
-import BusGrid from './BusGrid'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import LoginForm from './components/Login'
+import SignupForm from './components/Sign';
+import HomePage from './components/HomePage';
+import AboutUs from './components/AboutUs'
+import OurServices from './components/OurServices';
+import Fleet from './components/Fleet';
+import BusGrid from './components/BusGrid'
+
+
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
      <div>
-       {/* <AboutUs/>  */}
-       <BusGrid /> 
+     <Router>
+      <Routes>
+        <Route path="/" element={<LoginForm />} />
+        <Route path="/Signup" element={<SignupForm/>} />
+        <Route path="/" element={<SignupForm/>} />
+        <Route path='/homepage'element={<HomePage/>}/>
+        <Route path='/About'element={<AboutUs/>}/>
+        <Route path='/services'element={<OurServices/>}/>
+        <Route path='/fleet'element={<Fleet/>}/>
+        <Route path='/booking'element={<BusGrid/>}/>
+
+      </Routes>
+    </Router>
      </div>
     </>
   )
