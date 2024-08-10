@@ -4,14 +4,16 @@ import viteLogo from '/vite.svg'
 import './App.css'
  import AboutUs from './AboutUs'
 import BusGrid from './BusGrid'
+import ProfilePage from './ProfilePage'
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
      <div>
-       {/* <AboutUs/>  */}
-       <BusGrid /> 
+        {/* <AboutUs/>  
+       <BusGrid />  */}
+       <ProfilePage/>
      </div>
     </>
   )
