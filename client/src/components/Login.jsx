@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import './login.css';
+import { Link, useNavigate } from 'react-router-dom'
+
 const LoginForm = () => {
   const [formData, setFormData] = useState({
     email: '',
@@ -7,6 +9,7 @@ const LoginForm = () => {
   });
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -30,6 +33,7 @@ const LoginForm = () => {
       if (response.ok) {
         localStorage.setItem('access_token', data.access_token); // Store token
         alert('Login successful!');
+        navigate('/homepage');
         // Optionally redirect to a different page or update UI
       } else {
         setError(data.message);
@@ -64,7 +68,9 @@ const LoginForm = () => {
         {loading ? 'Logging in...' : 'Login'}
       </button>
       {error && <p style={{ color: 'red' }}>{error}</p>}
+      <p>Don't have an account? <Link to="/Signup">Sign up here</Link></p>
     </form>
+
   );
 };
 

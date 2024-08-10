@@ -1,7 +1,9 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import "./OurServices.css";
 
 const OurServices = () => {
+  const navigate = useNavigate();
   return (
     <section className="our-services">
       <div className="services-half left-half">
@@ -20,12 +22,22 @@ const OurServices = () => {
         <div className="service-item">
           <div className="service-icon">🚍</div>
           <h3 className="service-title">Fleet Management</h3>
-          <button className="service-button">Go to Fleet</button>
+          <button 
+            className="service-button" 
+            onClick={() => navigate('/fleet')}
+          >
+            Go to Fleet
+          </button>
         </div>
         <div className="service-item">
           <div className="service-icon">📅</div>
           <h3 className="service-title">Online Booking</h3>
-          <button className="service-button">Go to Booking</button>
+          <button 
+            className="service-button" 
+            onClick={() => navigate('/booking')}
+          >
+            Go to Booking
+          </button>
         </div>
       </div>
     </section>

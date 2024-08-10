@@ -1,5 +1,5 @@
 /* Full-page background */
-.background {
+/* .background {
     position: absolute;
     top: 0;
     left: 0;
@@ -9,7 +9,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     z-index: -1;
-}
+} */
 
 /* Login section styling */
 .login {
