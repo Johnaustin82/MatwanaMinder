@@ -112,9 +112,9 @@ p {
 
 /* Style for the sign-up button */
 .sign-up-button {
-  display: inline-block; /* Ensure it behaves like a button */
-  padding: 10px 20px; /* Add padding for button size */
-  font-family: 'Inknut Antiqua', serif; /* Apply font-family */
+  display: inline-block; 
+  padding: 10px 20px; 
+  font-family: 'Inknut Antiqua', serif; 
   font-size: 14px; 
   text-decoration: none;
   color: white; 
