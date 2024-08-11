@@ -84,9 +84,9 @@ input:focus {
 /* Style for headings */
 h3 {
   margin: 0; /* Remove default margin */
-  margin-bottom: 5px; /* Space between heading and input field */
-  text-align: left; /* Align heading to the left */
-  padding-top: 70px; /* Adjust padding to position the heading */
+  margin-bottom: 5px; 
+  text-align: left;
+  padding-top: 70px;
 }
 
 button {
