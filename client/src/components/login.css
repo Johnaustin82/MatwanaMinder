@@ -115,7 +115,7 @@ p {
   display: inline-block; /* Ensure it behaves like a button */
   padding: 10px 20px; /* Add padding for button size */
   font-family: 'Inknut Antiqua', serif; /* Apply font-family */
-  font-size: 14px; /* Match font size with paragraph */
+  font-size: 14px; 
   text-decoration: none;
   color: white; 
   background-color: #bbbbbb; 
