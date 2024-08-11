@@ -13,8 +13,6 @@ import BusGrid from './components/BusGrid'
 
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
      <div>
@@ -36,4 +34,4 @@ function App() {
   )
 }
 
-export default App
+export default App;

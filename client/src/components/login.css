@@ -1,140 +1,133 @@
-/* Full-page background */
-/* .background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('../assets/highway-forest-tree-spring.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    z-index: -1;
-} */
+@import url("https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@400;700&display=swap");
 
-/* Login section styling */
-.login {
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 2em;
-    border-radius: 20px;
-    margin: 10em auto; /* Vertical margin; adjust as needed */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    background-color: rgb(41, 40, 40); 
-    background-image: url('../assets/download.jpeg'); 
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat; /* Aligns the section to the right side */
-    max-width: 40%; /* Ensures the login section fits within the viewport */
+.form-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding-left: 20em;
 }
 
-
-/* Header styling */
-.header {
-    position: absolute; 
-    top: 2em;
-    left: 2em;
-    z-index: 1;
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 300px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  margin-top: 3em;
+  padding-left: 50em;
+  margin-right: 25em;
+  padding-right: 15em;
+  font-family: "Inknut Antiqua", serif;
+  padding-bottom: 15em;
 }
 
-.header span {
-    font-size: 2em; /* Reduced size for better fit */
-    color: rgb(194, 214, 156);
+.form-image-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
 }
 
-.header h3 {
-    font-size: 1.5em; /* Reduced size for better fit */
-    color: rgb(180, 255, 60);
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    text-align: center;
+.form-image {
+  width: 29%;
+  height: 85%;
+  object-fit: cover;
+  position: absolute;
+  margin-top: 49px;
+  filter: brightness(60%);
+}
+.text {
+  color: #af1717;
+  position: absolute;
+  margin-top: 350px;
+}
+.text h1 {
+  color: rgb(255, 255, 255);
+  margin-left: 150px;
+}
+.text h2 {
+  color: rgb(255, 255, 255);
+  margin-left: 70px;
+  font-size: 12px;
 }
 
-/* Login form container */
-.login1 {
-    color: white;
-    position: relative; /* Changed to relative */
-    max-width: 400px; /* Restrict width for better alignment */
-    margin: auto;
-    padding: 1em;
-    box-sizing: border-box; 
-}
-
-/* Input fields and buttons */
 input {
-    margin: 10px 0; 
-    padding: 10px;
-    width: calc(100% - 22px); /* Adjust width to account for padding */
-    border-radius: 5px;
-    border: none;
-    outline: none;
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 2px solid #4d4c4c;
+  outline: none;
+  font-family: "Inknut Antiqua", serif;
+  font-size: 1px;
+  line-height: 1.5;
+}
+
+input::placeholder {
+  color: #999;
+  font-family: "Inknut Antiqua", serif;
+  font-size: 14px;
+}
+
+input:focus {
+  border-bottom: 2px solid #002955;
+}
+
+h3 {
+  margin: 0;
+  margin-bottom: 5px;
+  text-align: left;
+  padding-top: 70px;
 }
 
 button {
-    margin: 10px 0; 
-    padding: 10px;
-    width: 100%;
-    border-radius: 5px;
-    border: none;
-    outline: none;
-    background-color: blue;
-    color: white;
-    cursor: pointer;
+  padding: 10px;
+  cursor: pointer;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 20px;
+  background-color: rgb(22, 22, 22);
+  color: white;
+  border: none;
 }
 
-button:hover {
-    background-color: darkblue;
+p {
+  margin-top: 20px;
+  font-family: "Inknut Antiqua", serif;
+  font-size: 14px;
+  line-height: 1.5;
+  white-space: nowrap;
 }
 
-/* Link styling */
-.login2 p a {
-    color: blue;
-    text-decoration: none;
-    cursor: pointer;
+.sign-up-button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-family: "Inknut Antiqua", serif;
+  font-size: 14px;
+  text-decoration: none;
+  color: white;
+  background-color: #bbbbbb;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
-.login2 p a:hover {
-    text-decoration: underline;
+.sign-up-button:hover {
+  background-color: #003366;
+  border-color: #003366;
 }
 
-/* Dropdown menu styling */
-.dropdown-menu {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    background: rgb(203, 207, 201);
-    border-radius: 5px;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-    padding: 10px;
-    width: 120px;
-    margin-top: 0px;
-    margin-left: 45%; /* Adjusted for better alignment */
+.sign-up-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.2);
 }
 
-.dropdown-menu::before {
-    content: "";
-    position: absolute;
-    top: -10px;
-    left: 55%;
-    transform: translateX(-50%);
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 0 10px 10px 10px;
-    border-color: transparent transparent rgb(203, 207, 201) transparent;
-}
-
-.dropdown-menu.visible {
-    display: flex;
-}
-
-.dropdown-menu a {
-    color: black;
-    text-decoration: none;
-    padding: 5px;
-    display: block;
-}
-
-.dropdown-menu a:hover {
-    background-color: rgb(190, 190, 190);
+h4 {
+  font-family: "Inknut Antiqua", serif;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
