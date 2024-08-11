@@ -34,12 +34,12 @@ form {
 }
 
 .form-image {
-  width: 29%; /* Full width of container */
-  height: 85%; /* Full height of container */
-  object-fit: cover; /* Cover the container */
+  width: 29%; 
+  height: 85%; 
+  object-fit: cover;
   position: absolute;
   margin-top: 49px;
-  filter: brightness(60%); /* Darken the image by reducing brightness */
+  filter: brightness(60%); 
 }
 .text{
   color: #af1717;
@@ -56,7 +56,7 @@ form {
   font-size: 12px;
 }
 
-/* Style for input fields */
+
 input {
   padding: 10px; 
   width: 100%;
