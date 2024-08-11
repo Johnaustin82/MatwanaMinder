@@ -89,11 +89,10 @@ h3 {
   padding-top: 70px; /* Adjust padding to position the heading */
 }
 
-/* Style for the submit button */
 button {
   padding: 10px;
   cursor: pointer;
-  width: 100%; /* Make button full width of the form */
+  width: 100%; 
   box-sizing: border-box; 
   margin-top: 20px;
   background-color: rgb(22, 22, 22);
