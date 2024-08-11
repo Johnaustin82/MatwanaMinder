@@ -116,12 +116,12 @@ p {
   padding: 10px 20px; /* Add padding for button size */
   font-family: 'Inknut Antiqua', serif; /* Apply font-family */
   font-size: 14px; /* Match font size with paragraph */
-  text-decoration: none; /* Remove underline from the link */
-  color: white; /* Text color */
+  text-decoration: none;
+  color: white; 
   background-color: #bbbbbb; 
   text-align: center;
   cursor: pointer; 
-  transition: background-color 0.3s ease, border-color 0.3s ease; /* Smooth color transition */
+  transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
 .sign-up-button:hover {
