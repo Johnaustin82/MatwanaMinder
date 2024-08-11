@@ -66,14 +66,14 @@ input {
   outline: none; /* Remove default focus outline */
   font-family: 'Inknut Antiqua', serif; /* Apply font-family */
   font-size: 1px; /* Adjust font size */
-  line-height: 1.5; /* Ensure line-height aligns text properly */
+  line-height: 1.5;
   
 }
 
 input::placeholder {
-  color: #999; /* Color for the placeholder text */
-  font-family: 'Inknut Antiqua', serif; /* Apply font-family */
-  font-size: 14px; /* Match font size with input text */
+  color: #999;
+  font-family: 'Inknut Antiqua', serif; 
+  font-size: 14px;
 }
 
 
