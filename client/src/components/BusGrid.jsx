@@ -22,6 +22,7 @@ const BusGrid = () => {
                 </div>
             ) : (
                 <div className="bus-grid-container">
+                     <h2>Choose Your Ride and Book Your Ticket..</h2>
                     <div className="bus-grid">
                         {busData.map((bus) => (
                             <div key={bus.id} className="bus-item" onClick={() => handleBusClick(bus)}>
