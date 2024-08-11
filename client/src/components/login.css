@@ -107,10 +107,10 @@ p {
   font-family: 'Inknut Antiqua', serif; /* Apply font-family */
   font-size: 14px; /* Adjust font size as needed */
   line-height: 1.5; /* Adjust line height for readability */
-  white-space: nowrap; /* Prevent text from wrapping to the next line */
+  white-space: nowrap;
 }
 
-/* Style for the sign-up button */
+
 .sign-up-button {
   display: inline-block; 
   padding: 10px 20px; 
