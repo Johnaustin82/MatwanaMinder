@@ -39,6 +39,7 @@ class Vehicle(db.Model):
     mileage = db.Column(db.Integer, nullable=False)
     route = db.Column(db.String(255), nullable=False)
     price = db.Column(db.Numeric(10,2), nullable=False)
+    image_url = db.Column(db.String(255))
 
     tickets = db.relationship('Ticket', backref='vehicle', lazy=True)
 
