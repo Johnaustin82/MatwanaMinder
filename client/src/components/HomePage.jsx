@@ -12,6 +12,7 @@ function HomePage() {
         <ul className="nav-menu">
           <li>About us</li>
           <li>Our services</li>
+          <li>Profile</li>
         </ul>
       </div> */}
       <div className="home-page">

@@ -9,7 +9,8 @@ import HomePage from './components/HomePage';
 import AboutUs from './components/AboutUs'
 import OurServices from './components/OurServices';
 import Fleet from './components/Fleet';
-import BusGrid from './components/BusGrid'
+import BusGrid from './components/BusGrid';
+import ProfilePage from './components/ProfilePage';
 
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
         <Route path='/services'element={<OurServices/>}/>
         <Route path='/fleet'element={<Fleet/>}/>
         <Route path='/booking'element={<BusGrid/>}/>
+        <Route path='/profile'element={<ProfilePage/>}/>
 
       </Routes>
     </Router>

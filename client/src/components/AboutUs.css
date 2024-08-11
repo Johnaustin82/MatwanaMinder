@@ -1,6 +1,6 @@
 .about-us-background {
     /* background-image: url('https://i.pinimg.com/236x/ee/9f/84/ee9f846dbf9f5520df0ce9893e2882df.jpg'); */
-    /* background-color: lightblue; */
+     background-color: rgb(201, 211, 214); 
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -12,7 +12,7 @@
   }
   
   .about-us-container {
-    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+    background-color: rgba(255, 255, 255, 0.678); 
     border-radius: 10px;
     padding: 20px;
     max-width: 800px;

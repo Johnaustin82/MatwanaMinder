@@ -6,37 +6,64 @@ const ProfilePage = () => {
         name: 'John Doe',
         phone: '123-456-7890',
         email: 'johndoe@example.com',
-        age: '30',
-        location: 'New York, USA'
+        role: 'passenger',
+        photo: null
     });
-
-    const [isEditing, setIsEditing] = useState(false);
 
     const handleChange = (e) => {
         const { name, value } = e.target;
         setProfile({ ...profile, [name]: value });
     };
 
-    const handleEditToggle = () => {
-        setIsEditing(!isEditing);
+    const handleFieldClick = (e) => {
+        e.target.removeAttribute('readonly');
+        e.target.focus();
     };
 
-    const handleSave = (e) => {
-        e.preventDefault();
-        setIsEditing(false);
-        console.log('Profile saved:', profile);
-       
+    const handleFieldBlur = (e) => {
+        e.target.setAttribute('readonly', true);
+        console.log('Profile updated:', profile);
+        // Here you would typically also update the profile on the server
+    };
+
+    const handlePhotoChange = (e) => {
+        const file = e.target.files[0];
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = () => {
+                setProfile({ ...profile, photo: reader.result });
+            };
+            reader.readAsDataURL(file);
+        }
     };
 
     return (
         <div className="profile-container">
-            <div className="sidebar">
-                <button onClick={handleEditToggle}>
-                    {isEditing ? 'Cancel' : 'Edit Profile'}
+            <div className="profile-header">
+                <div className="profile-photo">
+                    {profile.photo ? (
+                        <img src={profile.photo} alt="Profile" />
+                    ) : (
+                        <span>P</span>
+                    )}
+                </div>
+                <h2>Profile</h2>
+                <input 
+                    type="file" 
+                    id="photoUpload" 
+                    accept="image/*" 
+                    onChange={handlePhotoChange} 
+                    style={{ display: 'none' }}
+                />
+                <button
+                    className="edit-photo-button"
+                    onClick={() => document.getElementById('photoUpload').click()}
+                >
+                    Edit Profile Photo
                 </button>
             </div>
             <div className="profile-details">
-                <form onSubmit={handleSave}>
+                <form>
                     <label>
                         Name:
                         <input
@@ -44,10 +71,11 @@ const ProfilePage = () => {
                             name="name"
                             value={profile.name}
                             onChange={handleChange}
-                            readOnly={!isEditing}
+                            readOnly
+                            onClick={handleFieldClick}
+                            onBlur={handleFieldBlur}
                         />
                     </label>
-                    <br />
                     <label>
                         Phone:
                         <input
@@ -55,10 +83,11 @@ const ProfilePage = () => {
                             name="phone"
                             value={profile.phone}
                             onChange={handleChange}
-                            readOnly={!isEditing}
+                            readOnly
+                            onClick={handleFieldClick}
+                            onBlur={handleFieldBlur}
                         />
                     </label>
-                    <br />
                     <label>
                         Email:
                         <input
@@ -66,42 +95,26 @@ const ProfilePage = () => {
                             name="email"
                             value={profile.email}
                             onChange={handleChange}
-                            readOnly={!isEditing}
+                            readOnly
+                            onClick={handleFieldClick}
+                            onBlur={handleFieldBlur}
                         />
                     </label>
-                    <br />
                     <label>
-                        Age:
-                        <input
-                            type="number"
-                            name="age"
-                            value={profile.age}
+                        Role:
+                        <select
+                            name="role"
+                            value={profile.role}
                             onChange={handleChange}
-                            readOnly={!isEditing}
-                        />
+                            
+                            onClick={handleFieldClick}
+                            onBlur={handleFieldBlur}
+                        >
+                            <option value="passenger">Passenger</option>
+                            <option value="operator">Operator</option>
+                        </select>
                     </label>
-                    <br />
-                    <label>
-                        Location:
-                        <input
-                            type="text"
-                            name="location"
-                            value={profile.location}
-                            onChange={handleChange}
-                            readOnly={!isEditing}
-                        />
-                    </label>
-                    <br />
-                    {isEditing && <button type="submit">Save</button>}
                 </form>
-                <div className="profile-summary">
-                    <h3>Profile Summary:</h3>
-                    <p>Name: {profile.name}</p>
-                    <p>Phone: {profile.phone}</p>
-                    <p>Email: {profile.email}</p>
-                    <p>Age: {profile.age}</p>
-                    <p>Location: {profile.location}</p>
-                </div>
             </div>
         </div>
     );
