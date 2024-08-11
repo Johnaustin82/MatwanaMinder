@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@400;700&display=swap");
 
 .form-container {
   display: flex;
@@ -10,7 +10,7 @@
 form {
   display: flex;
   flex-direction: column;
-  align-items: flex-start; 
+  align-items: flex-start;
   width: 300px;
   padding: 20px;
   border: 1px solid #ddd;
@@ -18,71 +18,67 @@ form {
   padding-left: 50em;
   margin-right: 25em;
   padding-right: 15em;
-  font-family: 'Inknut Antiqua', serif;
+  font-family: "Inknut Antiqua", serif;
   padding-bottom: 15em;
 }
 
 .form-image-container {
-  position: absolute; 
+  position: absolute;
   top: 0;
   left: 0;
   width: 50%;
   height: 100%;
-  overflow: hidden; 
+  overflow: hidden;
 }
 
 .form-image {
-  width: 29%; 
-  height: 85%; 
+  width: 29%;
+  height: 85%;
   object-fit: cover;
   position: absolute;
   margin-top: 49px;
-  filter: brightness(60%); 
+  filter: brightness(60%);
 }
-.text{
+.text {
   color: #af1717;
   position: absolute;
   margin-top: 350px;
 }
-.text h1{
+.text h1 {
   color: rgb(255, 255, 255);
   margin-left: 150px;
 }
-.text h2{
+.text h2 {
   color: rgb(255, 255, 255);
   margin-left: 70px;
   font-size: 12px;
 }
 
-
 input {
-  padding: 10px; 
+  padding: 10px;
   width: 100%;
-  box-sizing: border-box; 
+  box-sizing: border-box;
   border: none;
-  border-bottom: 2px solid #4d4c4c; 
+  border-bottom: 2px solid #4d4c4c;
   outline: none;
-  font-family: 'Inknut Antiqua', serif; 
+  font-family: "Inknut Antiqua", serif;
   font-size: 1px;
   line-height: 1.5;
-  
 }
 
 input::placeholder {
   color: #999;
-  font-family: 'Inknut Antiqua', serif; 
+  font-family: "Inknut Antiqua", serif;
   font-size: 14px;
 }
-
 
 input:focus {
   border-bottom: 2px solid #002955;
 }
 
-
 h3 {
-  margin: 0; 
-  margin-bottom: 5px; 
+  margin: 0;
+  margin-bottom: 5px;
   text-align: left;
   padding-top: 70px;
 }
@@ -90,51 +86,48 @@ h3 {
 button {
   padding: 10px;
   cursor: pointer;
-  width: 100%; 
-  box-sizing: border-box; 
+  width: 100%;
+  box-sizing: border-box;
   margin-top: 20px;
   background-color: rgb(22, 22, 22);
   color: white;
   border: none;
 }
 
-
 p {
   margin-top: 20px;
-  font-family: 'Inknut Antiqua', serif; 
-  font-size: 14px; 
+  font-family: "Inknut Antiqua", serif;
+  font-size: 14px;
   line-height: 1.5;
   white-space: nowrap;
 }
 
-
 .sign-up-button {
-  display: inline-block; 
-  padding: 10px 20px; 
-  font-family: 'Inknut Antiqua', serif; 
-  font-size: 14px; 
+  display: inline-block;
+  padding: 10px 20px;
+  font-family: "Inknut Antiqua", serif;
+  font-size: 14px;
   text-decoration: none;
-  color: white; 
-  background-color: #bbbbbb; 
+  color: white;
+  background-color: #bbbbbb;
   text-align: center;
-  cursor: pointer; 
+  cursor: pointer;
   transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
 .sign-up-button:hover {
   background-color: #003366;
-  border-color: #003366; 
+  border-color: #003366;
 }
 
 .sign-up-button:focus {
-  outline: none; 
+  outline: none;
   box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.2);
 }
 
-
 h4 {
-  font-family: 'Inknut Antiqua', serif; 
-  white-space: nowrap; 
+  font-family: "Inknut Antiqua", serif;
+  white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis; 
+  text-overflow: ellipsis;
 }
