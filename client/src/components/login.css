@@ -58,10 +58,10 @@ form {
 
 /* Style for input fields */
 input {
-  padding: 10px; /* Adjust padding to ensure text aligns with bottom border */
-  width: 100%; /* Make inputs full width of the form */
-  box-sizing: border-box; /* Ensure padding does not affect width */
-  border: none; /* Remove all borders */
+  padding: 10px; 
+  width: 100%;
+  box-sizing: border-box; 
+  border: none;
   border-bottom: 2px solid #4d4c4c; 
   outline: none;
   font-family: 'Inknut Antiqua', serif; 
