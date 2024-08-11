@@ -7,7 +7,7 @@
   padding-left: 20em;
 }
 
-form {
+.Loginform {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -15,6 +15,7 @@ form {
   width: 400px;
   padding: 20px;
   border: 1px solid #ddd;
+  margin-top: 3em;
   font-family: "Inknut Antiqua", serif;
   padding-bottom: 15em;
 }
@@ -42,18 +43,18 @@ form {
   position: absolute;
   margin-top: 350px;
 }
-.text h1 {
+.text .H1 {
   color: white;
   margin-left: -420px;
   margin-top: -70px;
 }
-.text h2 {
+.text .H2 {
   color: rgb(255, 255, 255);
   margin-left: -500px;
   font-size: 16px;
 }
 
-input {
+.Input {
   padding: 10px;
   width: 100%;
   box-sizing: border-box;
@@ -65,24 +66,24 @@ input {
   line-height: 1.5;
 }
 
-input::placeholder {
+.Input::placeholder {
   color: black;
   font-family: "Inknut Antiqua", serif;
   font-size: 14px;
 }
 
-input:focus {
+.Input:focus {
   border-bottom: 2px solid #002955;
 }
 
-h3 {
+.H3 {
   margin: 0;
   margin-bottom: 5px;
   text-align: left;
   padding-top: 70px;
 }
 
-button {
+.btn {
   padding: 10px;
   cursor: pointer;
   width: 100%;
@@ -93,7 +94,7 @@ button {
   border: none;
 }
 
-p {
+.P1 {
   margin-top: 20px;
   font-family: "Inknut Antiqua", serif;
   font-size: 14px;
@@ -124,7 +125,7 @@ p {
   box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.2);
 }
 
-h4 {
+.H4 {
   font-family: "Inknut Antiqua", serif;
   white-space: nowrap;
   overflow: hidden;

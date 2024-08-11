@@ -49,7 +49,7 @@ const SignupForm = () => {
   return (
     <div className="signup">
       <h2>Sign up</h2>
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className='Sign'>
       <input
         type="text"
         name="name"

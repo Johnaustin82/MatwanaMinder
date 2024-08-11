@@ -29,7 +29,7 @@
   text-align: center;
 }
 
-.signup form {
+.signup .Sign {
   display: flex;
   flex-direction: column;
 }

@@ -47,39 +47,41 @@ const LoginForm = () => {
       <div className="img">
         <img src={img4} alt="Description" className="form-image" />
         <div className="text">
-          <h1>LOGIN WITH US!</h1>
-          <h2>
+          <h1 className="H1">LOGIN WITH US!</h1>
+          <h2 className="H2">
             log in TO ACCESS YOUR ACCOUNT AND ENJOY OUR SEAMLESS TRAVEL SERVICES
           </h2>
         </div>
       </div>
-      <form onSubmit={handleSubmit}>
-        <h4>YOUR ULTIMATE MATATU SOLUTION</h4>
-        <h3>Email address</h3>
+      <form onSubmit={handleSubmit} className="Loginform">
+        <h4 className="H4">YOUR ULTIMATE MATATU SOLUTION</h4>
+        <h3 className="H3">Email address</h3>
         <input
           type="email"
           name="email"
-          // placeholder="example@gmail.com"
+          className="Input"
+          placeholder="example@gmail.com"
           value={formData.email}
           onChange={handleChange}
           required
         />
-        <h3>Password</h3>
+        <h3 className="H3">Password</h3>
         <input
           type="password"
           name="password"
+          className="Input"
           placeholder="at least 8 characters"
           value={formData.password}
           onChange={handleChange}
           required
         />
-        <p>
+        <p className="P1">
           Don't have an account?{" "}
           <Link to="/Signup" className="sign-up-button">
             Sign up
           </Link>
         </p>
-        <button type="submit" disabled={loading}>
+        <button type="submit" disabled={loading} className="btn">
           {loading ? "Logging in..." : "Login"}
         </button>
         {error && <p style={{ color: "red" }}>{error}</p>}
