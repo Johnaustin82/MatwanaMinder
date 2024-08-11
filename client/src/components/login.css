@@ -76,14 +76,14 @@ input::placeholder {
   font-size: 14px; /* Match font size with input text */
 }
 
-/* Style for input focus state */
+
 input:focus {
-  border-bottom: 2px solid #002955; /* Change bottom border color on focus */
+  border-bottom: 2px solid #002955;
 }
 
-/* Style for headings */
+
 h3 {
-  margin: 0; /* Remove default margin */
+  margin: 0; 
   margin-bottom: 5px; 
   text-align: left;
   padding-top: 70px;
