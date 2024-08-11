@@ -4,19 +4,20 @@ import './BusEditForm.css';
 const EditBusForm = () => {
   const [plateNumber, setPlateNumber] = useState('');
   const [mileage, setMileage] = useState('');
+  const [roadName, setRoadName] = useState('');
   const [message, setMessage] = useState('');
   const [showPopup, setShowPopup] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
     // Add your form submission logic here
-    setMessage('Bus details updated successfully!');
+    setMessage('Details updated successfully!');
     setShowPopup(true);
   };
 
   return (
     <div className="edit-bus-form">
-      <h2 className="form-heading">Edit Bus Information</h2>
+      <h2 className="form-heading">Edit Bus and Road Information</h2>
       
       <form onSubmit={handleSubmit}>
         <div className="form-group">
@@ -47,11 +48,25 @@ const EditBusForm = () => {
           />
         </div>
 
+        <div className="form-group">
+          <label className="form-label" htmlFor="roadName">
+            Route Name
+          </label>
+          <input
+            type="text"
+            id="roadName"
+            value={roadName}
+            onChange={(e) => setRoadName(e.target.value)}
+            className="form-input"
+            required
+          />
+        </div>
+
         <button
           type="submit"
           className="submit-button"
         >
-          Update Bus
+          Update Details
         </button>
       </form>
 
