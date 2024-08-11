@@ -23,14 +23,14 @@ form {
   font-family: 'Inknut Antiqua', serif;
   padding-bottom: 15em;
 }
-/* Style for the image */
+
 .form-image-container {
-  position: absolute; /* Position absolutely within the container */
+  position: absolute; 
   top: 0;
   left: 0;
-  width: 50%; /* Adjust width as needed */
+  width: 50%;
   height: 100%;
-  overflow: hidden; /* Hide overflow if the image is larger than container */
+  overflow: hidden; 
 }
 
 .form-image {
