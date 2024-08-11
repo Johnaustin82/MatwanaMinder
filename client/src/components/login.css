@@ -125,16 +125,16 @@ p {
 }
 
 .sign-up-button:hover {
-  background-color: #003366; /* Darker background color on hover */
-  border-color: #003366; /* Darker border color on hover */
+  background-color: #003366;
+  border-color: #003366; 
 }
 
 .sign-up-button:focus {
-  outline: none; /* Remove default focus outline */
-  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.2); /* Add custom focus outline */
+  outline: none; 
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.2);
 }
 
-/* Style for the heading */
+
 h4 {
   font-family: 'Inknut Antiqua', serif; 
   white-space: nowrap; 
