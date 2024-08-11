@@ -1,14 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@400;700&display=swap');
 
-/* Center the form horizontally within the parent container */
 .form-container {
   display: flex;
-  justify-content: center; /* Center form horizontally */
+  justify-content: center;
   width: 100%;
   padding-left: 20em;
 }
 
-/* Style the form */
 form {
   display: flex;
   flex-direction: column;
