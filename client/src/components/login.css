@@ -62,10 +62,10 @@ input {
   width: 100%; /* Make inputs full width of the form */
   box-sizing: border-box; /* Ensure padding does not affect width */
   border: none; /* Remove all borders */
-  border-bottom: 2px solid #4d4c4c; /* Only bottom border visible */
-  outline: none; /* Remove default focus outline */
-  font-family: 'Inknut Antiqua', serif; /* Apply font-family */
-  font-size: 1px; /* Adjust font size */
+  border-bottom: 2px solid #4d4c4c; 
+  outline: none;
+  font-family: 'Inknut Antiqua', serif; 
+  font-size: 1px;
   line-height: 1.5;
   
 }
