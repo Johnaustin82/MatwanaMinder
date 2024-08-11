@@ -104,9 +104,9 @@ button {
 /* Style for error message and other text */
 p {
   margin-top: 20px;
-  font-family: 'Inknut Antiqua', serif; /* Apply font-family */
-  font-size: 14px; /* Adjust font size as needed */
-  line-height: 1.5; /* Adjust line height for readability */
+  font-family: 'Inknut Antiqua', serif; 
+  font-size: 14px; 
+  line-height: 1.5;
   white-space: nowrap;
 }
 
