@@ -1,131 +1,78 @@
-/* Ensure the body and html elements take up the full height and width */
-html, body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  width: 100%;
-}
-
-/* Full-page layout */
-.signup-page {
+/* sign.css */
+/* body {
+  background-color: #f4f7f6;
+  font-family: 'Roboto', sans-serif;
   display: flex;
-  height: 100vh; /* Full viewport height */
-  width: 100vw; /* Full viewport width */
-  overflow: hidden; /* Hide overflow to ensure proper layout */
-  position: relative; /* Allow absolute positioning for background image */
-}
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+} */
 
-/* Background container */
-.background-image {
-  position: absolute; /* Cover the full page */
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden; /* Hide any overflow */
-}
-
-/* Image styling */
-.signup-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Ensure the image covers the container */
-}
-
-/* Signup form styling */
-.signup-form {
-  position: absolute; /* Position absolutely to center it */
-  top: 50%; /* Center vertically */
-  left: 50%; /* Center horizontally */
-  transform: translate(-50%, -50%); /* Adjust position to center */
-  background: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+.signup {
+  background-color: #ffffff;
+  justify-content: center;
+  margin-left: 400px;
+  padding: 40px;
   border-radius: 10px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  padding: 2em;
-  box-sizing: border-box; /* Include padding and border in element's total width and height */
-  z-index: 1; /* Ensure the form is above the background image */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  width: 500px;
+  /* max-width: 400px; */
+  box-sizing: border-box;
+}
+
+.signup h2 {
+  margin-bottom: 20px;
+  font-size: 28px;
+  font-weight: 600;
+  color: #333;
+  text-align: center;
+}
+
+.signup form {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  max-width: 90%; /* Limit the width of the form */
-  width: 500px; /* Fixed width for the form */
 }
 
-/* Typography */
-.signup-form h2 {
-  font-size: 2.5em;
-  color: #333;
-  margin-bottom: 0.5em;
-  text-align: center;
-  font-family: 'Roboto', sans-serif;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.signup-form p {
-  color: #666;
-  margin-bottom: 1.5em;
-  text-align: center;
-  font-family: 'Open Sans', sans-serif;
-}
-
-/* Form fields and select dropdown */
-.signup-form input,
-.signup-form select {
-  margin: 0.75em 0;
-  padding: 0.75em;
-  width: calc(100% - 16px);
-  border-radius: 8px;
+.signup input,
+.signup select {
+  margin-bottom: 20px;
+  padding: 10px;
+  font-size: 16px;
   border: 1px solid #ddd;
+  border-radius: 5px;
+  transition: border-color 0.3s ease;
+}
+
+.signup input:focus,
+.signup select:focus {
+  border-color: #1ab188;
   outline: none;
-  font-size: 1em;
-  font-family: 'Open Sans', sans-serif;
-  transition: border-color 0.3s ease-in-out;
 }
 
-.signup-form input:focus,
-.signup-form select:focus {
-  border-color: #007bff;
-  box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
-}
-
-/* Button styling */
-.signup-form button {
-  display: block;
-  margin: 1em 0;
-  padding: 0.75em;
-  width: 100%;
-  border-radius: 8px;
+.signup button {
+  padding: 15px;
+  background-color: #1ab188;
   border: none;
-  background: linear-gradient(to right, #007bff, #0056b3); /* Gradient button background */
+  border-radius: 5px;
   color: #fff;
-  font-size: 1em;
-  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  font-weight: bold;
   cursor: pointer;
-  transition: background 0.3s ease-in-out, transform 0.3s ease-in-out;
+  transition: background-color 0.3s ease;
 }
 
-.signup-form button:hover {
-  background: linear-gradient(to right, #0056b3, #003d79); /* Darker gradient on hover */
-  transform: translateY(-2px);
+.signup button:hover {
+  background-color: #159a75;
 }
 
-.signup-form button:active {
-  transform: translateY(1px);
-}
-
-/* Error message styling */
-.error-message {
-  color: #d9534f;
-  margin-top: 1em;
+.signup p {
+  color: red;
   text-align: center;
-  font-size: 0.875em;
-  font-family: 'Open Sans', sans-serif;
 }
 
-/* Responsive design */
-@media (max-width: 768px) {
-  .signup-form {
-    width: 90%;
-    max-width: none; /* Allow the form to take full width on smaller screens */
-  }
+.signup p.error {
+  color: #e74c3c;
+  margin-top: -10px;
 }
+
