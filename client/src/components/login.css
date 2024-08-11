@@ -118,9 +118,9 @@ p {
   font-size: 14px; /* Match font size with paragraph */
   text-decoration: none; /* Remove underline from the link */
   color: white; /* Text color */
-  background-color: #bbbbbb; /* Button background color */ /* Rounded corners */ /* Border color to match background */
-  text-align: center; /* Center text inside the button */
-  cursor: pointer; /* Show pointer cursor on hover */
+  background-color: #bbbbbb; 
+  text-align: center;
+  cursor: pointer; 
   transition: background-color 0.3s ease, border-color 0.3s ease; /* Smooth color transition */
 }
 
