@@ -136,8 +136,8 @@ p {
 
 /* Style for the heading */
 h4 {
-  font-family: 'Inknut Antiqua', serif; /* Apply font-family */
-  white-space: nowrap; /* Prevent text from wrapping to the next line */
-  overflow: hidden; /* Hide any overflow text */
-  text-overflow: ellipsis; /* Add ellipsis if text overflows */
+  font-family: 'Inknut Antiqua', serif; 
+  white-space: nowrap; 
+  overflow: hidden;
+  text-overflow: ellipsis; 
 }
