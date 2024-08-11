@@ -36,6 +36,8 @@ class Vehicle(db.Model):
     model = db.Column(db.String(255), nullable=False)
     capacity = db.Column(db.Integer, nullable=False)
     operator_id = db.Column(db.Integer, nullable=False)
+    mileage = db.Column(db.Integer, nullable=False)
+    route = db.Column(db.String(255), nullable=False)
     price = db.Column(db.DECIMAL, nullable=False)
 
     tickets = db.relationship('Ticket', backref='vehicle', lazy=True)
