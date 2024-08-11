@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./login.css";
-import img4 from '../assets/4.jpeg'; // Example import
+import img4 from "../assets/4.jpeg";
 
 const LoginForm = () => {
   const [formData, setFormData] = useState({ email: "", password: "" });
@@ -47,10 +47,12 @@ const LoginForm = () => {
       <div className="img">
         <img src={img4} alt="Description" className="form-image" />
         <div className="text">
-        <h1>LOGIN WITH US!</h1>
-        <h2>log in TO ACCESS YOUR ACCOUNT AND ENJOY OUR SEAMLESS TRAVEL SERVICES</h2>
+          <h1>LOGIN WITH US!</h1>
+          <h2>
+            log in TO ACCESS YOUR ACCOUNT AND ENJOY OUR SEAMLESS TRAVEL SERVICES
+          </h2>
         </div>
-        </div>
+      </div>
       <form onSubmit={handleSubmit}>
         <h4>YOUR ULTIMATE MATATU SOLUTION</h4>
         <h3>Email address</h3>
