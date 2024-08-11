@@ -1,155 +1,143 @@
-/* Full-page background */
-/* .background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-/* Basic reset and full viewport height */
-html, body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    background-image: url('../assets/highway-forest-tree-spring.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    z-index: -1;
-} */
+@import url('https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@400;700&display=swap');
 
-/* Login section styling */
-.login {
-    text-align: center;
-    width: 100%;
-    font-family: 'Arial', sans-serif;
-  }
+/* Center the form horizontally within the parent container */
+.form-container {
+  display: flex;
+  justify-content: center; /* Center form horizontally */
+  width: 100%;
+  padding-left: 20em;
+}
+
+/* Style the form */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align all form elements to the left */
+  width: 300px; /* Adjust as needed */
+  padding: 20px; /* Adjust padding to create space around form elements */
+  border: 1px solid #ddd; /* Optional: border for visual separation */ /* Optional: rounded corners */ /* Optional: background color */
+  margin-top: 3em;
+  padding-left: 50em;
+  margin-right: 25em;
+  padding-right: 15em;
+  font-family: 'Inknut Antiqua', serif;
+  padding-bottom: 15em;
+}
+/* Style for the image */
+.form-image-container {
+  position: absolute; /* Position absolutely within the container */
+  top: 0;
+  left: 0;
+  width: 50%; /* Adjust width as needed */
+  height: 100%;
+  overflow: hidden; /* Hide overflow if the image is larger than container */
+}
+
+.form-image {
+  width: 29%; /* Full width of container */
+  height: 85%; /* Full height of container */
+  object-fit: cover; /* Cover the container */
+  position: absolute;
+  margin-top: 49px;
+  filter: brightness(60%); /* Darken the image by reducing brightness */
+}
+.text{
+  color: #af1717;
+  position: absolute;
+  margin-top: 350px;
+}
+.text h1{
+  color: rgb(255, 255, 255);
+  margin-left: 150px;
+}
+.text h2{
+  color: rgb(255, 255, 255);
+  margin-left: 70px;
+  font-size: 12px;
+}
+
+/* Style for input fields */
+input {
+  padding: 10px; /* Adjust padding to ensure text aligns with bottom border */
+  width: 100%; /* Make inputs full width of the form */
+  box-sizing: border-box; /* Ensure padding does not affect width */
+  border: none; /* Remove all borders */
+  border-bottom: 2px solid #4d4c4c; /* Only bottom border visible */
+  outline: none; /* Remove default focus outline */
+  font-family: 'Inknut Antiqua', serif; /* Apply font-family */
+  font-size: 1px; /* Adjust font size */
+  line-height: 1.5; /* Ensure line-height aligns text properly */
   
-  /* Background styling */
-  .login-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    width: 100vw; /* Ensure full viewport width */
-    background: url('./path/to/your/road.webp') no-repeat center center fixed;
-    background-size: cover;
-  }
-  
-  /* Center the form and apply styling */
-  .login-form {
-    background: rgba(255, 255, 255, 0.9); /* Slightly transparent white background */
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    padding: 2.5em; /* Increased padding for more space */
-    width: 90%;
-    max-width: 500px; /* Increased max-width */
-    box-sizing: border-box;
-    text-align: center;
-    position: relative; /* For absolute positioning of error message */
-    min-height: 400px; /* Increased minimum height */
-  }
-  
-  /* Heading styling */
-  .login-form h2 {
-    font-size: 2em;
-    margin-bottom: 0.5em;
-    color: #333;
-    font-family: 'Roboto', sans-serif;
-  }
-  
-  /* Form description styling */
-  .login-form p {
-    font-size: 1em;
-    margin-bottom: 1.5em;
-    color: #666;
-    font-family: 'Open Sans', sans-serif;
-  }
-  
-  /* Form fields styling */
-  .login-form input {
-    width: calc(100% - 2em);
-    padding: 0.75em;
-    margin: 0.5em 0;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    font-size: 1em;
-    box-sizing: border-box;
-    font-family: 'Open Sans', sans-serif;
-    transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-  }
-  
-  .login-form input:focus {
-    border-color: #007bff;
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
-    outline: none;
-  }
-  
-  /* Button styling */
-  .login-form button {
-    width: 100%;
-    padding: 0.75em;
-    border: none;
-    border-radius: 8px;
-    background: linear-gradient(to right, #007bff, #0056b3);
-    color: #fff;
-    font-size: 1em;
-    font-family: 'Roboto', sans-serif;
-    cursor: pointer;
-    transition: background 0.3s ease-in-out, transform 0.3s ease-in-out;
-  }
-  
-  .login-form button:disabled {
-    background: #0056b3;
-    cursor: not-allowed;
-  }
-  
-  .login-form button:hover {
-    background: linear-gradient(to right, #0056b3, #003d79);
-    transform: translateY(-2px);
-  }
-  
-  .login-form button:active {
-    transform: translateY(1px);
-  }
-  
-  /* Error message styling */
-  .error-message {
-    color: #d9534f;
-    margin-top: 1em;
-    font-size: 0.875em;
-    font-family: 'Open Sans', sans-serif;
-  }
-  
-  /* Sign up prompt styling */
-  .sign-up-prompt {
-    margin-top: 1.5em;
-    font-size: 0.875em;
-    color: #666;
-    font-family: 'Open Sans', sans-serif;
-  }
-  
-  .sign-up-prompt button {
-    border: none;
-    color: #007bff; /* Color for the sign-up button text */
-    cursor: pointer;
-    font-family: 'Open Sans', sans-serif;
-    background: none;
-    text-decoration: underline; /* Underline text */
-  }
-  
-  /* Remove hover effect for sign-up button */
-  .sign-up-prompt button:hover {
-    color: #0056b3; /* Change color on hover */
-  }
-  
-  /* Responsive design */
-  @media (max-width: 480px) {
-    .login-form {
-      padding: 1em;
-      width: 90%;
-      max-width: none;
-    }
-  
-    .login-form h2 {
-      font-size: 1.75em;
-    }
-  }
-  
+}
+
+input::placeholder {
+  color: #999; /* Color for the placeholder text */
+  font-family: 'Inknut Antiqua', serif; /* Apply font-family */
+  font-size: 14px; /* Match font size with input text */
+}
+
+/* Style for input focus state */
+input:focus {
+  border-bottom: 2px solid #002955; /* Change bottom border color on focus */
+}
+
+/* Style for headings */
+h3 {
+  margin: 0; /* Remove default margin */
+  margin-bottom: 5px; /* Space between heading and input field */
+  text-align: left; /* Align heading to the left */
+  padding-top: 70px; /* Adjust padding to position the heading */
+}
+
+/* Style for the submit button */
+button {
+  padding: 10px;
+  cursor: pointer;
+  width: 100%; /* Make button full width of the form */
+  box-sizing: border-box; /* Ensure padding does not affect width */
+  margin-top: 20px; /* Space above the button */
+  background-color: rgb(22, 22, 22);
+  color: white;
+  border: none; /* Remove default border */ /* Rounded corners */
+}
+
+/* Style for error message and other text */
+p {
+  margin-top: 20px;
+  font-family: 'Inknut Antiqua', serif; /* Apply font-family */
+  font-size: 14px; /* Adjust font size as needed */
+  line-height: 1.5; /* Adjust line height for readability */
+  white-space: nowrap; /* Prevent text from wrapping to the next line */
+}
+
+/* Style for the sign-up button */
+.sign-up-button {
+  display: inline-block; /* Ensure it behaves like a button */
+  padding: 10px 20px; /* Add padding for button size */
+  font-family: 'Inknut Antiqua', serif; /* Apply font-family */
+  font-size: 14px; /* Match font size with paragraph */
+  text-decoration: none; /* Remove underline from the link */
+  color: white; /* Text color */
+  background-color: #bbbbbb; /* Button background color */ /* Rounded corners */ /* Border color to match background */
+  text-align: center; /* Center text inside the button */
+  cursor: pointer; /* Show pointer cursor on hover */
+  transition: background-color 0.3s ease, border-color 0.3s ease; /* Smooth color transition */
+}
+
+.sign-up-button:hover {
+  background-color: #003366; /* Darker background color on hover */
+  border-color: #003366; /* Darker border color on hover */
+}
+
+.sign-up-button:focus {
+  outline: none; /* Remove default focus outline */
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.2); /* Add custom focus outline */
+}
+
+/* Style for the heading */
+h4 {
+  font-family: 'Inknut Antiqua', serif; /* Apply font-family */
+  white-space: nowrap; /* Prevent text from wrapping to the next line */
+  overflow: hidden; /* Hide any overflow text */
+  text-overflow: ellipsis; /* Add ellipsis if text overflows */
+}
