@@ -31,7 +31,7 @@ class User(db.Model):
         return bcrypt.check_password_hash(self.password, password)
 
 class Vehicle(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
+    id = db.Column(db.Integer, primary_key=True,autoincrement=True)
     license_plate = db.Column(db.String(120), nullable=False)
     model = db.Column(db.String(120), nullable=False)
     capacity = db.Column(db.Integer, nullable=False)
