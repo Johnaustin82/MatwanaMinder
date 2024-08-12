@@ -1,103 +1,138 @@
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5; /* Light grey background for the whole page */
+}
+
+h2, h3 {
+  margin: 0;
+  font-weight: 600;
+  text-align: center;
+}
+
+p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* About Us Section */
+/* About Us Section */
 .about-us-background {
-    /* background-image: url('https://i.pinimg.com/236x/ee/9f/84/ee9f846dbf9f5520df0ce9893e2882df.jpg'); */
-    /* background-color: lightblue; */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-  }
-  
-  .about-us-container {
-    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
-    border-radius: 10px;
-    padding: 20px;
-    max-width: 800px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  h2 {
-    color: #2c3e50;
-    text-align: center;
-  }
-  
-  .top-section {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  .tagline {
-    color: black;
-    font-size: 1.2em;
-  }
-  
-  .bottom-section {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 20px;
-  }
-  
-  .text-container {
-    flex: 1;
-    margin-right: 20px;
-  }
-  
-  .description {
-    font-size: 1em;
-    color: #34495e;
-    line-height: 1.6;
-  }
-  
-  .services-section {
-    margin-top: 40px;
-    text-align: center;
-  }
-  
-  .services-title {
-    color: #2c3e50;
-    margin-bottom: 20px;
-  }
-  
-  .services-container {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-  }
-  
-  .service-card {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 20px;
-    margin: 10px;
-    max-width: 300px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .service-card h3 {
-    color: #2c3e50;
-  }
-  
-  .service-card p {
-    color: #34495e;
-  }
-  
-  .contact-us-section {
-    margin-top: 40px;
-    text-align: center;
-  }
-  
-  .contact-us-section h2 {
-    color: #2c3e50;
-    margin-bottom: 10px;
-  }
-  
-  .contact-us-section p {
-    font-size: 1em;
-    color: #34495e;
-    margin: 5px 0;
-  }
+  background-image: url('https://www.techarena.co.ke/wp-content/uploads/2022/11/BasiGo.jpg'); /* Updated to your image URL */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px; /* Increased padding for a more spacious feel */
+}
+
+.about-us-container {
+  background-color: rgba(244, 233, 216, 0.9); /* Desert sand color with 90% opacity */
+  border-radius: 12px;
+  padding: 40px;
+  max-width: 900px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+
+h2 {
+  color: #2c3e50;
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.top-section {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.tagline {
+  color: #34495e;
+  font-size: 1.5em;
+  font-weight: 400;
+}
+
+.bottom-section {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.text-container {
+  flex: 1;
+  margin-right: 30px;
+}
+
+.description {
+  font-size: 1.1em;
+  color: #4a4a4a;
+}
+
+/* Services Section */
+.services-section {
+  margin-top: 60px;
+  text-align: center;
+}
+
+.services-title {
+  color: #2c3e50;
+  margin-bottom: 30px;
+  font-size: 1.8em;
+}
+
+.services-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px; /* Better spacing between service cards */
+}
+
+.service-card {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 25px;
+  max-width: 320px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for hover effect */
+}
+
+.service-card:hover {
+  transform: translateY(-5px); /* Slight lift effect on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.service-card h3 {
+  color: #2c3e50;
+  font-size: 1.4em;
+  margin-bottom: 10px;
+}
+
+.service-card p {
+  color: #6c757d;
+  font-size: 1em;
+}
+
+/* Contact Us Section */
+.contact-us-section {
+  margin-top: 60px;
+  text-align: center;
+}
+
+.contact-us-section h2 {
+  color: #2c3e50;
+  margin-bottom: 20px;
+  font-size: 1.8em;
+}
+
+.contact-us-section p {
+  font-size: 1.1em;
+  color: #4a4a4a;
+  margin: 10px 0;
+}
