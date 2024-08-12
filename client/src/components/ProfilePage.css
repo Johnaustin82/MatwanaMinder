@@ -56,6 +56,9 @@
 .edit-photo-button:hover {
     background-color: #004d40; 
 }
+.profile-details{
+    width: 100%;
+}
 .profile-details form {
     display: flex;
     flex-direction: column;
