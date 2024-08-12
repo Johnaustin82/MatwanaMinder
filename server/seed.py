@@ -1,53 +1,97 @@
-#!/usr/bin/env python3
-
-from app import app
+from app import app, db
+from models import User, Vehicle, Ticket
 from faker import Faker
+import random
 import datetime
-from models import db, User, Vehicle, Ticket, Review
-from flask_bcrypt import Bcrypt
 
-bcrypt = Bcrypt()
+fake = Faker()
 
-with app.app_context():
-    fake = Faker()
-    print("Starting seed...")
-    
-    # Delete all records/rows in the tables
-    User.query.delete()
-    Vehicle.query.delete()
-    Ticket.query.delete()
-    Review.query.delete()
-    
-    # Seed Users
+# Define some initial data
+def seed_users():
     users = [
-        User(name=fake.name(), email=fake.email(), password=bcrypt.generate_password_hash(fake.password()).decode('utf-8'), role='passenger'),
-        User(name=fake.name(), email=fake.email(), password=bcrypt.generate_password_hash(fake.password()).decode('utf-8'), role='operator')
+        User(name='John', email='john@gmail.com', password='password', role='operator'),
+        User(name='Jane Smith', email='jane@gmail.com', password='password', role='passenger'),
+        User(name='Alice Johnson', email='alice@gmail.com', password='password', role='passenger'),
+        User(name='Bob Brown', email='bob@gmail.com', password='password', role='passenger')
     ]
+    
     db.session.add_all(users)
     db.session.commit()
+    return {user.email: user.id for user in users}
 
-    # Seed Vehicles
+def seed_vehicles(user_ids):
     vehicles = [
-        Vehicle(license_plate=fake.license_plate(), model='Bus', capacity=fake.random_int(min=20, max=50), operator_id=users[3].id, mileage=fake.random_int(min=10000, max=200000), route=fake.city(), price=fake.random_number(digits=2)),
-        Vehicle(license_plate=fake.license_plate(), model='Minivan', capacity=fake.random_int(min=10, max=15), operator_id=users[3].id, mileage=fake.random_int(min=10000, max=200000), route=fake.city(), price=fake.random_number(digits=2)),
+        Vehicle(
+            license_plate='KDK 412G',
+            model='Isuzu',
+            capacity=33,
+            operator_id=user_ids['john@gmail.com'],
+            mileage=90000,
+            route='Embakasi',
+            price=100.00,
+            image_url="https://i.pinimg.com/564x/f4/21/88/f42188a2179b16751a11cfef41e20b43.jpg"
+        ),
+        Vehicle(
+            license_plate='KCA 283Y',
+            model='Isuzu',
+            capacity=33,
+            operator_id=user_ids['john@gmail.com'],
+            mileage=30000,
+            route='Umoja',
+            price=100.00,
+            image_url="https://i.pinimg.com/564x/5f/5b/99/5f5b99b4f93a1994ab4b7b8161db739b.jpg"
+        )
     ]
+    
     db.session.add_all(vehicles)
     db.session.commit()
+    return {vehicle.license_plate: vehicle.id for vehicle in vehicles}
 
-    # Seed Tickets
+def seed_tickets(user_ids, vehicle_ids):
     tickets = [
-        Ticket(user_id=users[0].id, vehicle_id=vehicles[0].id, route=vehicles[0].route, schedule='08:00', purchase_date=datetime.date.today(), price=fake.random_number(digits=2)),
-        Ticket(user_id=users[0].id, vehicle_id=vehicles[1].id, route=vehicles[1].route, schedule='09:00', purchase_date=datetime.date.today() - datetime.timedelta(days=1), price=fake.random_number(digits=2)),
+        Ticket(
+            user_id=user_ids['jane@gmail.com'],
+            vehicle_id=vehicle_ids['1'],
+            busName='Isuzu',
+            from_='Cbd',
+            to='Embakasi',
+            travelDate=(datetime.date.today() + datetime.timedelta(days=7)).strftime('%Y-%m-%d'),
+            travelTime='10:00'
+        ),
+        Ticket(
+            user_id=user_ids['alice@gmail.com'],
+            vehicle_id=vehicle_ids['2'],
+            busName='Isuzu',
+            from_='CBD',
+            to='Umoja',
+            travelDate=(datetime.date.today() + datetime.timedelta(days=10)).strftime('%Y-%m-%d'),
+            travelTime='15:00'
+        ),
+        Ticket(
+            user_id=user_ids['bob@gmail.com'],
+            vehicle_id=vehicle_ids['2'],
+            busName='Isuzu',
+            from_='CBD',
+            to='Umoja',
+            travelDate=(datetime.date.today() + datetime.timedelta(days=10)).strftime('%Y-%m-%d'),
+            travelTime='15:00'
+        )
     ]
+    
     db.session.add_all(tickets)
     db.session.commit()
 
-    # Seed Reviews
-    reviews = [
-        Review(user_id=users[0].id, reviewed_user_id=users[1].id, rating=5, comments='Great driver!'),
-        Review(user_id=users[0].id, reviewed_user_id=users[2].id, rating=4, comments='Helpful conductor.'),
-    ]
-    db.session.add_all(reviews)
-    db.session.commit()
-
-    print("Database seeded successfully!")
+if _name_ == '_main_':
+    with app.app_context():
+        db.create_all()
+        
+        print("Seeding users...")
+        user_ids = seed_users()
+        
+        print("Seeding vehicles...")
+        vehicle_ids = seed_vehicles(user_ids)
+        
+        print("Seeding tickets...")
+        seed_tickets(user_ids, vehicle_ids)
+        
+        print("Seeding completed.")
