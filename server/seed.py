@@ -28,16 +28,16 @@ with app.app_context():
 
     # Seed Vehicles
     vehicles = [
-        Vehicle(license_plate=fake.license_plate(), model='Bus', capacity=fake.random_int(min=20, max=50), operator_id=users[3].id, driver_id=users[1].id, conductor_id=users[2].id, start_time=datetime.time(8, 0), end_time=datetime.time(18, 0), price=fake.random_number(digits=2)),
-        Vehicle(license_plate=fake.license_plate(), model='Minivan', capacity=fake.random_int(min=10, max=15), operator_id=users[3].id, driver_id=users[1].id, conductor_id=users[2].id, start_time=datetime.time(9, 0), end_time=datetime.time(17, 0), price=fake.random_number(digits=2)),
+        Vehicle(license_plate=fake.license_plate(), model='Bus', capacity=fake.random_int(min=20, max=50), operator_id=users[3].id, mileage=fake.random_int(min=10000, max=200000), route=fake.city(), price=fake.random_number(digits=2)),
+        Vehicle(license_plate=fake.license_plate(), model='Minivan', capacity=fake.random_int(min=10, max=15), operator_id=users[3].id, mileage=fake.random_int(min=10000, max=200000), route=fake.city(), price=fake.random_number(digits=2)),
     ]
     db.session.add_all(vehicles)
     db.session.commit()
 
     # Seed Tickets
     tickets = [
-        Ticket(user_id=users[0].id, vehicle_id=vehicles[0].id, purchase_date=datetime.date.today(), seat_number='A1'),
-        Ticket(user_id=users[0].id, vehicle_id=vehicles[1].id, purchase_date=datetime.date.today() - datetime.timedelta(days=1), seat_number='B1'),
+        Ticket(user_id=users[0].id, vehicle_id=vehicles[0].id, route=vehicles[0].route, schedule='08:00', purchase_date=datetime.date.today(), price=fake.random_number(digits=2)),
+        Ticket(user_id=users[0].id, vehicle_id=vehicles[1].id, route=vehicles[1].route, schedule='09:00', purchase_date=datetime.date.today() - datetime.timedelta(days=1), price=fake.random_number(digits=2)),
     ]
     db.session.add_all(tickets)
     db.session.commit()
