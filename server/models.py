@@ -43,4 +43,23 @@ class Vehicle(db.Model):
         return f"<Vehicle {self.license_plate} - {self.model}>"
 
 # Add a relationship in the User model to link vehicles
-User.vehicles = db.relationship('Vehicle', order_by=Vehicle.id, back_populates='operator')
+User.vehicles = db.relationship('Vehicle', order_by=Vehicle.id, back_populates='operator')  
+
+
+class Ticket(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    busName = db.Column(db.String(100), nullable=False)
+    from_ = db.Column(db.String(100), nullable=False)
+    to = db.Column(db.String(100), nullable=False)
+    travelDate = db.Column(db.String(10), nullable=False)
+    travelTime = db.Column(db.String(10), nullable=False)
+
+    def to_dict(self):
+        return {
+            "id": self.id,
+            "busName": self.busName,
+            "from": self.from_,
+            "to": self.to,
+            "travelDate": self.travelDate,
+            "travelTime": self.travelTime
+        }
