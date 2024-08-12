@@ -81,7 +81,7 @@ def seed_tickets(user_ids, vehicle_ids):
     db.session.add_all(tickets)
     db.session.commit()
 
-if _name_ == '_main_':
+if __name__ == '_main_':
     with app.app_context():
         db.create_all()
         
