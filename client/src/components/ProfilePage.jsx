@@ -23,7 +23,6 @@ const ProfilePage = () => {
     const handleFieldBlur = (e) => {
         e.target.setAttribute('readonly', true);
         console.log('Profile updated:', profile);
-        // Here you would typically also update the profile on the server
     };
 
     const handlePhotoChange = (e) => {
