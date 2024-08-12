@@ -63,3 +63,19 @@ class Ticket(db.Model):
             "travelDate": self.travelDate,
             "travelTime": self.travelTime
         }
+
+class Review(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
+    reviewed_user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
+    rating = db.Column(db.Integer, nullable=False)
+    comments = db.Column(db.String(255), nullable=False)
+
+    def to_dict(self):
+        return {
+            "id": self.id,
+            "user_id": self.user_id,
+            "reviewed_user_id": self.reviewed_user_id,
+            "rating": self.rating,
+            "comments": self.comments
+        }
