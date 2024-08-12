@@ -1,0 +1,29 @@
+/* General container for the Mileage component */
+.mileage-container {
+    padding: 20px; /* Padding around the content */
+    background-color: #f4f6f8; /* Light background color for the content area */
+  }
+  
+  /* Typography for the Mileage title */
+  .mileage-title {
+    font-size: 2rem; /* Font size for the title */
+    font-weight: 600; /* Bold font weight */
+    margin-bottom: 20px; /* Space below the title */
+    color: #333; /* Dark text color for the title */
+  }
+  
+  /* Paper (card) styling for Mileage */
+  .mileage-paper {
+    padding: 16px; /* Padding inside the paper */
+    background-color: #fff; /* White background for the paper */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Shadow effect */
+  }
+  
+  .mileage-paper h6 {
+    font-size: 1.25rem; /* Font size for subheadings */
+    font-weight: 500; /* Medium font weight */
+    margin-bottom: 10px; /* Space below the subheading */
+    color: #555; /* Slightly lighter text color for subheadings */
+  }
+  
