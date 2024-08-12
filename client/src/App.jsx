@@ -11,6 +11,7 @@ import OurServices from './components/OurServices';
 import Fleet from './components/Fleet';
 import BusGrid from './components/BusGrid';
 import ProfilePage from './components/ProfilePage';
+import ReviewJourney from './components/ReviewJourney';
 
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
         <Route path='/fleet'element={<Fleet/>}/>
         <Route path='/booking'element={<BusGrid/>}/>
         <Route path='/profile'element={<ProfilePage/>}/>
+        <Route path='/Reviews'element={<ReviewJourney/>}/>
 
       </Routes>
     </Router>

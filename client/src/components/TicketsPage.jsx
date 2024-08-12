@@ -1,11 +1,10 @@
 import React from 'react';
-import './TicketsPage.css';
+import { Link } from 'react-router-dom';
 
-const TicketsPage = ({ tickets, onDeleteTicket, onBack }) => {
+const TicketsPage = ({ tickets, onDeleteTicket }) => {
     return (
-        <div className="tickets-page">
+        <div>
             <h2>Your Booked Tickets</h2>
-            <button onClick={onBack}>Back to Bus List</button>
             {tickets.length === 0 ? (
                 <p>No tickets booked yet.</p>
             ) : (
@@ -17,7 +16,10 @@ const TicketsPage = ({ tickets, onDeleteTicket, onBack }) => {
                             <p>To: {ticket.to}</p>
                             <p>Date: {ticket.travelDate}</p>
                             <p>Time: {ticket.travelTime}</p>
-                            <button onClick={() => onDeleteTicket(ticket.id)}>Cancel Ticket</button>
+                            <div>
+                                <Link to={`/Reviews/${ticket.id}`}>Add/Edit Review</Link>
+                                <button onClick={() => onDeleteTicket(ticket.id)}>Cancel Ticket</button>
+                            </div>
                         </li>
                     ))}
                 </ul>

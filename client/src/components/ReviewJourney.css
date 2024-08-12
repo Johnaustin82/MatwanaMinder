@@ -1,0 +1,55 @@
+.review-journey-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #02022e;
+    border-radius: 8px;
+    background-color: #d9f3f5;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .review-journey-container h2 {
+    text-align: center;
+  }
+  
+  .review-journey-container form {
+    width: 55%;
+    border: #1b2938;
+  }
+  
+  .review-journey-container div {
+    margin-bottom: 20px;
+  }
+  
+  .review-journey-container label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+  
+  .review-journey-container select,
+  .review-journey-container textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #0a0e44;
+  }
+  
+  .review-journey-container textarea {
+    height: 100px;
+    resize: vertical;
+  }
+  
+  .review-journey-container button {
+    padding: 10px 20px;
+    background-color: #42505f;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .review-journey-container button:hover {
+    background-color: #1b2938;
+  }
