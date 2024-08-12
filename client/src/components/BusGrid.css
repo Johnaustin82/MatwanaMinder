@@ -1,0 +1,35 @@
+
+.bus-grid-container {
+    background-color: 9white; 
+    padding:100 px;
+}
+
+.bus-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
+    gap: 20px; 
+}
+
+.bus-item {
+    cursor: pointer;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #caf0f8;
+    transition: transform 0.3s ease; /
+}
+
+.bus-item img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.bus-item h3 {
+    margin: 10px 0;
+    color: #333;
+}
+
+.bus-item:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}

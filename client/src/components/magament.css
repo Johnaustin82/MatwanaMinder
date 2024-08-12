@@ -1,0 +1,196 @@
+/* Apply styles to the entire page */
+body {
+   background-color: rgb(75, 75, 60);
+ /* Background color for the whole page */
+    margin: 0;
+    font-family: Arial, sans-serif; /* Consistent font */
+    color: #fff; /* Text color for contrast */
+  }
+  
+  /* Style for the Magament component */
+  .Magament {
+    background: linear-gradient(
+        45deg,
+        #ffffff 0%,       /* Bright white for a high-light start */
+        #e0e0e0 15%,      /* Light grey to soften the transition */
+        #c6f5ff 30%,      /* Light cyan for a cool, bright effect */
+        #a3d9ff 45%,      /* Soft blue to continue the lighting theme */
+        #8ac9ff 60%,      /* Vibrant, yet light blue for added energy */
+        #4aa3e1 75%,      /* Bright azure for a deeper contrast */
+        #0077cc 90%,      /* Intense blue to enhance the lighting effect */
+        #003366 100%      /* Dark blue to ground the gradient with depth */
+    );
+    padding: 20px; /* Padding inside the container */
+    border-radius: 8px; /* Rounded corners for the container */
+    max-width: 800px; /* Maximum width for readability */
+    margin: 20px auto; /* Center the container horizontally */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Vertically center items */
+    padding-bottom: 20em;
+  }
+  
+  /* Style for images */
+  .Magament img {
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 5px; /* Rounded corners for the image */
+    margin-right: 20px; /* Space between image and text */
+  }
+  
+  /* Style for text container */
+  .text-container {
+    flex: 1;
+    margin-left: 10em; /* Takes up remaining space */
+  }
+  
+  /* Style for headings */
+  h3 {
+    font-size: 1.5em; /* Larger font size for prominence */
+    margin: 0; /* Remove default margin */
+    color: #333; /* Dark text color for contrast */
+  }
+  
+  h5 {
+    font-size: 1.2em; /* Slightly smaller than h3 */
+    margin: 10px 0 0; /* Margin above the heading */
+    color: #4b9744; /* Medium-dark color for secondary text */
+  }
+  
+  /* Optional: Add responsive styling */
+  @media (max-width: 768px) {
+    .Magament {
+      flex-direction: column; /* Stack image and text vertically on smaller screens */
+      align-items: flex-start; /* Align items to the start of the container */
+      padding: 15px; /* Reduce padding on smaller screens */
+    }
+  
+    .Magament img {
+      width: 100%; /* Make the image responsive */
+      max-width: none; /* Remove maximum width constraint */
+      margin-right: 0; /* Remove margin on smaller screens */
+      margin-bottom: 15px; /* Add space below the image */
+    }
+  
+    h3 {
+      font-size: 1.2em; /* Adjust font size */
+    }
+  
+    h5 {
+      font-size: 1em; /* Adjust font size */
+    }
+  }
+  
+  /* Style for the card */
+  .card {
+    background: linear-gradient(
+    45deg,
+    #001f3f 0%,       /* Very dark blue, representing the deep ocean depths */
+    #003366 20%,      /* Deep navy blue for added depth */
+    #004080 40%,      /* Dark blue to simulate the ocean's depth */
+    #00509e 60%,      /* Rich blue with subtle brightness */
+    #006994 80%,      /* Deep azure to reflect the ocean’s mid-depth */
+    #0082c8 100%      /* Dark, muted blue for a cohesive oceanic feel */
+);
+    padding: 30px; /* Padding inside the card */
+    border-radius: 8px; /* Rounded corners for the card */
+    max-width: 800px; /* Same width as Magament */
+    margin: 20px auto; /* Center the card horizontally */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    border-top-left-radius: 10em;
+    border-top-right-radius: 10em;
+    text-align: center;
+    margin-top: -23em;
+    padding-bottom: 20em;
+  }
+  
+  /* Search container styles */
+  .search-container input {
+    flex: 1; /* Take up remaining space */
+    padding: 10px; /* Padding inside the input field */
+    border: none; /* Remove border */
+    border-radius: 4px; /* Rounded corners */
+    font-size: 1em; /* Font size */
+  }
+  
+  .search-icon {
+    margin-left: 10px; /* Space between input and icon */
+    color: #fff; /* Icon color */
+    font-size: 1.5em; /* Icon size */
+    cursor: pointer; /* Cursor for hover effect */
+    transition: color 0.3s ease-in-out; /* Smooth transition */
+  }
+  
+  /* Style for card2 */
+  .card2 {
+    background-color: #006994 10%; /* Background color for the card */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    text-align: center;
+    padding: 20px; /* Padding inside the card */
+    width: 15em;
+    margin-top: 2em; /* Adjust margin-top to align with card3 */
+    margin-left: 3em;
+    position: relative; /* Required for absolute positioning of the image */
+    overflow: hidden; /* Ensure that the content does not overflow the card */
+    height: 18em;
+  }
+  
+  /* Style for images inside card2 */
+  .card2 img {
+    width: 100%; /* Make the image fill the width of the card */
+    border-radius: 8px; /* Rounded corners for the image */
+    display: block; /* Remove bottom spacing/margin */
+    position: absolute; /* Position image absolutely within card2 */
+    top: 0; /* Align image to the top */
+    left: 0; /* Align image to the left */
+    height: 60%; /* Adjust height to fit card */
+    object-fit: cover; /* Ensure image covers area */
+  }
+  
+  /* Style for details inside card2 */
+  .card2-details {
+    position: absolute; /* Position text absolutely within card2 */
+    top: 78%; /* Position details within card2 */
+    left: 50%; /* Center text horizontally */
+    transform: translate(-50%, -50%); /* Translate to the opposite of the center */
+    font-size: 1.2em; /* Font size */
+    color: #b1cef5; /* Text color */
+  }
+  
+  /* Style for card3 */
+  .card3 {
+    background-color: #006994 10%; /* Background color for the card */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    text-align: center;
+    padding: 20px; /* Padding inside the card */
+    width: 15em;
+    margin-top: -20em; /* Align with card2 */
+    margin-left: 30em;
+    position: relative; /* Required for absolute positioning of the image */
+    overflow: hidden; /* Ensure that the content does not overflow the card */
+    height: 18em;
+  }
+  
+  /* Style for images inside card3 */
+  .card3 img {
+    width: 100%; /* Make the image fill the width of the card */
+    border-radius: 8px; /* Rounded corners for the image */
+    display: block; /* Remove bottom spacing/margin */
+    position: absolute; /* Position image absolutely within card3 */
+    top: 0; /* Align image to the top */
+    left: 0; /* Align image to the left */
+    height: 60%; /* Adjust height to fit card */
+    object-fit: cover; /* Ensure image covers area */
+  }
+  
+  /* Style for details inside card3 */
+  .card3-details {
+    position: absolute; /* Position text absolutely within card3 */
+    top: 78%; /* Position details within card3 */
+    left: 50%; /* Center text horizontally */
+    transform: translate(-50%, -50%); /* Translate to the opposite of the center */
+    font-size: 1.2em; /* Font size */
+    color: #b1cef5; /* Text color */
+  }
+  
