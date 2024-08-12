@@ -1,71 +1,133 @@
+/* Apply a full-screen gradient background with stripes */
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh; /* Full viewport height */
+  width: 100vw;  /* Full viewport width */
+  background: linear-gradient(135deg, #0033cc, #66ccff); /* Deep blue to light blue gradient */
+  font-family: Arial, sans-serif; /* Default font */
+  color: #333; /* Default text color for the page */
+  position: relative; /* Position relative for absolute positioning of pseudo-elements */
+  overflow: hidden; /* Hide overflow to ensure stripes don't cause scrollbars */
+}
+
+/* Create the diagonal stripes using pseudo-elements */
+body::before, body::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%; /* Extend beyond the viewport */
+  height: 200%; /* Extend beyond the viewport */
+  background: linear-gradient(45deg, rgba(0,0,0,0.1) 25%, transparent 25%, transparent 50%, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0.1) 75%, transparent 75%, transparent); /* Diagonal stripes */
+  z-index: 1; /* Ensure the stripes are below other content */
+  opacity: 0.3; /* Adjust opacity for subtle effect */
+  transform: rotate(15deg); /* Rotate to achieve the diagonal stripe effect */
+}
+
+/* Additional styles to ensure the container is centered and styled properly */
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  position: relative; /* Ensure the container is above the stripes */
+  z-index: 2; /* Higher than the stripes */
+}
+
+/* Apply a smooth blue gradient background */
 .fleet-container {
-    max-width: 800px; /* Reduced width */
-    max-height: 800px; /* Set a maximum height */
-    margin: 20px auto;
-    display: flex;
-    flex-direction: column;
-    background-color: white;
-    overflow: hidden; /* Hide any overflow content if it exceeds the container height */
-  }
-  
-  
-  .fleet-text-container {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  .fleet-text {
-    color: #333;
-    font-size: 24px;
-    font-weight: bold;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  }
-  
-  .fleet-card {
-    overflow: hidden;
-    margin-bottom: 20px;
-  }
-  
-  .fleet-image {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    position: relative;
-  }
-  
-  .fleet-image img {
-    width: 60%; /* Adjust the width to suit your needs */
-    height: 400px; /* Set a fixed height */
-    object-fit: cover; /* Ensure the image covers the area while maintaining aspect ratio */
-  }
-  
-  .fleet-buttons {
-    padding: 16px;
-    display: flex;
-    justify-content: center; /* Center align the button groups */
-    gap: 60px; /* Space between the groups */
-  }
-  
-  .button-group-left,
-  .button-group-right {
-    display: flex;
-    flex-direction: column;
-    gap: 10px; /* Space between buttons in each group */
-  }
-  
-  .fleet-button {
-    margin: 8px 0;
-    padding: 10px;
-    font-size: 16px;
-    cursor: pointer;
-    border: none;
-    border-radius: 4px;
-    background-color: black;
-    color: white;
-    transition: background-color 0.3s;
-  }
-  
-  .fleet-button:hover {
-    background-color: #0056b3;
-  }
-  
+  max-width: 800px; /* Define the maximum width */
+  max-height: 800px; /* Define the maximum height */
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(135deg, #050916, #66ccff); /* Deep blue to light blue gradient */
+  border-radius: 12px; /* Rounded corners */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  overflow: hidden; /* Hide any overflow content */
+  padding: 20px; /* Padding inside the container */
+  color: #fff; /* Text color for contrast */
+  position: relative; /* Ensure content is above the stripes */
+  z-index: 2; /* Higher than the stripes */
+}
+
+/* Center text and provide spacing */
+.fleet-text-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.fleet-text {
+  font-size: 28px; /* Larger font size for emphasis */
+  font-weight: bold;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4); /* Enhanced text shadow */
+  color: #fff; /* White text for contrast against gradient */
+}
+
+/* Style for the image container */
+.fleet-card {
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.fleet-image {
+  width: 100%;
+  display: flex;
+  justify-content: center; /* Center image horizontally */
+  align-items: center; /* Center image vertically */
+  height: 400px; /* Fixed height */
+  border-radius: 8px; /* Rounded corners */
+}
+
+/* Style the image */
+.fleet-image img {
+  max-width: 17em;
+  max-height: 100%;
+  object-fit: cover; /* Ensure the image covers the container */
+  border-radius: 8px; /* Rounded corners for the image */
+}
+
+/* Style the button container and buttons */
+.fleet-buttons {
+  display: flex;
+  justify-content: center; /* Center align the button groups */
+  gap: 40px; /* Space between button groups */
+  flex-wrap: wrap; /* Allow buttons to wrap if needed */
+  margin-top: 20px; /* Margin above buttons */
+  padding: 0 20px; /* Padding to ensure content doesn't touch edges */
+  position: relative; /* Ensure buttons are on top of stripes */
+  z-index: 2; /* Higher than the stripes */
+}
+
+.button-group-left,
+.button-group-right {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Space between buttons in each group */
+}
+
+/* Styling for the fleet buttons */
+.fleet-button {
+  padding: 12px 24px; /* Increased padding for larger buttons */
+  font-size: 18px; /* Larger font size */
+  cursor: pointer; /* Show pointer cursor on hover */
+  border: none;
+  border-radius: 8px; /* Rounded corners */
+  background-color: #333; /* Dark background for buttons */
+  color: #fff; /* White text */
+  transition: background-color 0.3s, transform 0.3s; /* Smooth transitions for background color and transform */
+}
+
+/* Hover effect for buttons */
+.fleet-button:hover {
+  background-color: #555; /* Slightly lighter background on hover */
+  transform: translateY(-2px); /* Slight lift effect on hover */
+}
