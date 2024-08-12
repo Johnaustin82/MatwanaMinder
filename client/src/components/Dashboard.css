@@ -1,0 +1,19 @@
+/* General container for the Dashboard component */
+.dashboard-container {
+  padding: 20px; /* Padding around the content */
+  background-color: #f4f6f8; /* Light background color for the content area */
+}
+
+/* Typography for the Dashboard title */
+.dashboard-title {
+  font-size: 2rem; /* Font size for the title */
+  font-weight: 600; /* Bold font weight */
+  margin-bottom: 20px; /* Space below the title */
+  color: #333; /* Dark text color for the title */
+}
+
+/* Typography for the Dashboard subtitle */
+.dashboard-subtitle {
+  font-size: 1.25rem; /* Font size for the subtitle */
+  color: #555; /* Slightly lighter text color for the subtitle */
+}
