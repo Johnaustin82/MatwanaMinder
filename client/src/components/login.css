@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@400;700&display=swap");
 
+body{
+background-color: #9500ff;
+}
+
 .form-container {
   display: flex;
   justify-content: center;
@@ -11,7 +15,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  height: 100vh;
+  height: 50vh;
   width: 400px;
   padding: 20px;
   border: 1px solid #ddd;
