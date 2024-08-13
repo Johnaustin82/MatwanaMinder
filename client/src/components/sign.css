@@ -1,67 +1,78 @@
-
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f9;
+/* sign.css */
+/* body {
+  background-color: #490757;
+  font-family: 'Roboto', sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
   margin: 0;
-}
+} */
 
-form {
-  background: #afc0da;
-  padding: 2rem;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 100%;
-  max-width: 400px;
-}
-
-input, select {
-  width: 100%;
-  padding: 12px 15px;
-  margin: 8px 0;
-  border: 1px solid #ddd;
-  border-radius: 4px;
+.signup {
+  background-color: #490757;
+  justify-content: center;
+  margin-left: 400px;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  width: 500px;
+  /* max-width: 400px; */
   box-sizing: border-box;
-  font-size: 16px;
 }
 
-input:focus, select:focus {
-  border-color: #007bff;
-  outline: none;
-  box-shadow: 0 0 5px rgba(38, 143, 255, 0.2);
-}
-
-button {
-  background-color: #007bff;
-  color: #ffffff;
-  padding: 12px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 16px;
-  transition: background-color 0.3s ease;
-  width: 100%;
-}
-
-button:disabled {
-  background-color: #c0c0c0;
-  cursor: not-allowed;
-}
-
-button:hover:not(:disabled) {
-  background-color: #0056b3;
-}
-
-p {
-  color: #ff4d4d;
-  font-size: 14px;
-  margin-top: 12px;
-}
-h2{
+.signup h2 {
+  margin-bottom: 20px;
+  font-size: 28px;
+  font-weight: 600;
+  color: #333;
   text-align: center;
-  font-size: 2.5em;
-  color: #343a40;
 }
+
+.signup .Sign {
+  display: flex;
+  flex-direction: column;
+}
+
+.signup input,
+.signup select {
+  margin-bottom: 20px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  transition: border-color 0.3s ease;
+}
+
+.signup input:focus,
+.signup select:focus {
+  border-color: #1ab188;
+  outline: none;
+}
+
+.signup button {
+  padding: 15px;
+  background-color: #1ab188;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.signup button:hover {
+  background-color: #159a75;
+}
+
+.signup p {
+  color: red;
+  text-align: center;
+}
+
+.signup p.error {
+  color: #e74c3c;
+  margin-top: -10px;
+}
+

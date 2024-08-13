@@ -14,7 +14,7 @@ class User(db.Model):
     password = db.Column(db.String(60), nullable=False)
     role = db.Column(db.String(20), nullable=False)
 
-    def __init__(self, name, email, password, role):
+    def _init_(self, name, email, password, role):
         self.name = name
         self.email = email
         self.password = bcrypt.generate_password_hash(password).decode('utf-8')
@@ -22,3 +22,44 @@ class User(db.Model):
 
     def check_password(self, password):
         return bcrypt.check_password_hash(self.password, password)
+    
+class Vehicle(db.Model):
+    _tablename_ = 'vehicles'
+
+    id = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    license_plate = db.Column(db.String(15), unique=True, nullable=False)
+    model = db.Column(db.String(50), nullable=False)
+    capacity = db.Column(db.Integer, nullable=False)
+    operator_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
+    mileage = db.Column(db.Integer, nullable=False)
+    route = db.Column(db.String(100), nullable=False)
+    price = db.Column(db.Numeric(10, 2), nullable=False)
+    image_url = db.Column(db.String(255), nullable=True)
+
+    # Relationship to the User model
+    operator = db.relationship('User', back_populates='vehicles')
+
+    def _repr_(self):
+        return f"<Vehicle {self.license_plate} - {self.model}>"
+
+# Add a relationship in the User model to link vehicles
+User.vehicles = db.relationship('Vehicle', order_by=Vehicle.id, back_populates='operator')  
+
+
+class Ticket(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    busName = db.Column(db.String(100), nullable=False)
+    from_ = db.Column(db.String(100), nullable=False)
+    to = db.Column(db.String(100), nullable=False)
+    travelDate = db.Column(db.String(10), nullable=False)
+    travelTime = db.Column(db.String(10), nullable=False)
+
+    def to_dict(self):
+        return {
+            "id": self.id,
+            "busName": self.busName,
+            "from": self.from_,
+            "to": self.to,
+            "travelDate": self.travelDate,
+            "travelTime": self.travelTime
+        }

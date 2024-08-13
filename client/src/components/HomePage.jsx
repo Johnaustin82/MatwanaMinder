@@ -12,11 +12,12 @@ function HomePage() {
         <ul className="nav-menu">
           <li>About us</li>
           <li>Our services</li>
+          <li>Profile</li>
         </ul>
       </div> */}
       <div className="home-page">
-        <div className="content">
-          <p>Ride smart,manage better,your ultimate matatu solution.</p>
+        <div className="Content"style={{ fontSize: '60px', fontWeight: 'bold', textAlign: 'left' }}>
+        <p>"RIDE<br/>SMART,<br/>MANAGE<br/>BETTER:<br/>YOUR<br/>ULTIMATE<br/>MATATU<br/>SOLUTION"</p>
         </div>
         <div className="image-container">
           <img
