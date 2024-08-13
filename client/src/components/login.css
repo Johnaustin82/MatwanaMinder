@@ -1,81 +1,133 @@
 @import url("https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@400;700&display=swap");
 
-body {
-  margin: 0;
-  padding: 0;
-  height: 100vh; /* Full viewport height */
-  overflow: hidden; /* Prevent scrollbars */
-  font-family: "Inknut Antiqua", serif;
-  position: relative; /* Allow positioning of child elements */
-}
-
 .form-container {
   display: flex;
   justify-content: center;
-  align-items: center;
-  position: relative;
   width: 100%;
-  height: 100vh; /* Full viewport height */
-}
-
-.img {
-  position: fixed; /* Fixed positioning to cover the entire viewport */
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden; /* Hide overflow to prevent image cutoffs */
-  z-index: -1; /* Place it behind other content */
-}
-
-.form-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Cover the viewport while maintaining aspect ratio */
-  filter: brightness(60%); /* Dim the image for better readability */
+  padding-left: 20em;
 }
 
 .Loginform {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Center align the form contents */
+  align-items: flex-start;
+  height: 100vh;
   width: 400px;
   padding: 20px;
   border: 1px solid #ddd;
-  background-color: #ffffff; /* Add background color for better visibility */
-  z-index: 1; /* Ensure the form is above the background image */
+  margin-top: 3em;
+  font-family: "Inknut Antiqua", serif;
+  padding-bottom: 15em;
+}
+
+.form-image-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.form-image {
+  width: 500px;
+  height: 100vh;
+  object-fit: cover;
+  position: absolute;
+  /* margin-top: 49px; */
+  margin-left: -550px;
+  filter: brightness(60%);
+}
+.text {
+  color: #af1717;
+  position: absolute;
+  margin-top: 350px;
+}
+.text .H1 {
+  color: white;
+  margin-left: -420px;
+  margin-top: -70px;
+}
+.text .H2 {
+  color: rgb(255, 255, 255);
+  margin-left: -500px;
+  font-size: 16px;
+}
+
+.Input {
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 2px solid #4d4c4c;
+  outline: none;
+  font-family: "Inknut Antiqua", serif;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.Input::placeholder {
+  color: black;
+  font-family: "Inknut Antiqua", serif;
+  font-size: 14px;
+}
+
+.Input:focus {
+  border-bottom: 2px solid #002955;
+}
+
+.H3 {
+  margin: 0;
+  margin-bottom: 5px;
+  text-align: left;
+  padding-top: 70px;
 }
 
 .btn {
   padding: 10px;
   cursor: pointer;
-  width: 150px; /* Adjust width as needed */
-  background-color: #ca80ff;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 20px;
+  background-color: rgb(22, 22, 22);
   color: white;
   border: none;
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  z-index: 2; /* Ensure the button is above other elements */
-}
-
-.H1, .H2, .H3, .H4 {
-  margin: 0;
-}
-
-.Input {
-  width: 100%;
-  padding: 10px;
-  margin: 10px 0;
-  border: 1px solid #ddd;
-  border-radius: 5px;
 }
 
 .P1 {
-  margin: 10px 0;
+  margin-top: 20px;
+  font-family: "Inknut Antiqua", serif;
+  font-size: 14px;
+  line-height: 1.5;
+  white-space: nowrap;
 }
 
 .sign-up-button {
-  color: #ca80ff;
+  display: inline-block;
+  padding: 10px 20px;
+  font-family: "Inknut Antiqua", serif;
+  font-size: 14px;
   text-decoration: none;
+  color: white;
+  background-color: #bbbbbb;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.sign-up-button:hover {
+  background-color: #003366;
+  border-color: #003366;
+}
+
+.sign-up-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.2);
+}
+
+.H4 {
+  font-family: "Inknut Antiqua", serif;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
