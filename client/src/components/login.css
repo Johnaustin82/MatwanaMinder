@@ -93,7 +93,7 @@ background-color: #9500ff;
   width: 100%;
   box-sizing: border-box;
   margin-top: 20px;
-  background-color: rgb(22, 22, 22);
+  background-color: #ca80ff;
   color: white;
   border: none;
 }
@@ -113,7 +113,7 @@ background-color: #9500ff;
   font-size: 14px;
   text-decoration: none;
   color: white;
-  background-color: #bbbbbb;
+  background-color: #9500ff;
   text-align: center;
   cursor: pointer;
   transition: background-color 0.3s ease, border-color 0.3s ease;
