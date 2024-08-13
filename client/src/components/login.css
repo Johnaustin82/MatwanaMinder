@@ -1,13 +1,34 @@
 @import url("https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@400;700&display=swap");
- 
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh; /* Ensure body takes full viewport height */
+  overflow: hidden; /* Prevent scrollbars */
+  position: relative; /* Allow absolute positioning of child elements */
+}
+
+.form-image {
+  width: 100%;
+  height: 100vh;
+  color: transparent;
+  object-fit: cover;
+  filter: brightness(60%);
+  position: fixed; /* Fixed positioning to ensure it stays in place */
+  top: 0;
+  left: 0;
+  z-index: -1; /* Ensure the image is behind other content */
+}
 
 .form-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
+  position: absolute; /* Absolute positioning to fill the viewport */
+  top: 0;
+  left: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh; /* Full viewport height */
 }
 
 .Loginform {
@@ -21,28 +42,6 @@
   font-family: "Inknut Antiqua", serif;
   z-index: 1; /* Ensure the form is above other elements */
 }
-
-
-html, body {
-  margin: 0;
-  padding: 0;
-  height: 80%;
-  overflow: hidden; /* Prevent scrollbars */
-}
-
-.form-image {
-  width: 100%;
-  height: 100vh;
-  color: transparent;
-  object-fit: cover;
-  filter: brightness(60%);
-  position: fixed; /* Use fixed positioning to ensure it stays in place */
-  top: 0;
-  left: 0;
-  z-index: -1; /* Ensure the image is behind other content */
-}
-
-
 
 .btn {
   padding: 10px;
