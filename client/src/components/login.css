@@ -3,52 +3,53 @@
 body {
   margin: 0;
   padding: 0;
-  height: 100vh; /* Ensure body takes full viewport height */
+  height: 100vh; /* Full viewport height */
   overflow: hidden; /* Prevent scrollbars */
-  position: relative; /* Allow absolute positioning of child elements */
-}
-
-.form-image {
-  width: 100%;
-  height: 100vh;
-  color: transparent;
-  object-fit: cover;
-  filter: brightness(60%);
-  position: fixed; /* Fixed positioning to ensure it stays in place */
-  top: 0;
-  left: 0;
-  z-index: -1; /* Ensure the image is behind other content */
+  font-family: "Inknut Antiqua", serif;
+  position: relative; /* Allow positioning of child elements */
 }
 
 .form-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute; /* Absolute positioning to fill the viewport */
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+}
+
+.img {
+  position: fixed; /* Fixed positioning to cover the entire viewport */
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh; /* Full viewport height */
+  height: 100%;
+  overflow: hidden; /* Hide overflow to prevent image cutoffs */
+  z-index: -1; /* Place it behind other content */
+}
+
+.form-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Cover the viewport while maintaining aspect ratio */
+  filter: brightness(60%); /* Dim the image for better readability */
 }
 
 .Loginform {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center; /* Center align the form contents */
   width: 400px;
   padding: 20px;
   border: 1px solid #ddd;
   background-color: #ffffff; /* Add background color for better visibility */
-  font-family: "Inknut Antiqua", serif;
-  z-index: 1; /* Ensure the form is above other elements */
+  z-index: 1; /* Ensure the form is above the background image */
 }
 
 .btn {
   padding: 10px;
   cursor: pointer;
-  width: 100%;
-  box-sizing: border-box;
-  margin-top: 20px;
+  width: 150px; /* Adjust width as needed */
   background-color: #ca80ff;
   color: white;
   border: none;
@@ -56,4 +57,25 @@ body {
   top: 20px;
   right: 20px;
   z-index: 2; /* Ensure the button is above other elements */
+}
+
+.H1, .H2, .H3, .H4 {
+  margin: 0;
+}
+
+.Input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.P1 {
+  margin: 10px 0;
+}
+
+.sign-up-button {
+  color: #ca80ff;
+  text-decoration: none;
 }

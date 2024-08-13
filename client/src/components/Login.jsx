@@ -49,7 +49,7 @@ const LoginForm = () => {
         <div className="text">
           <h1 className="H1">LOGIN WITH US!</h1>
           <h2 className="H2">
-            log in TO ACCESS YOUR ACCOUNT AND ENJOY OUR SEAMLESS TRAVEL SERVICES
+            LOG IN TO ACCESS YOUR ACCOUNT AND ENJOY OUR SEAMLESS TRAVEL SERVICES
           </h2>
         </div>
       </div>
