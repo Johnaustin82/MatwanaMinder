@@ -1,0 +1,99 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw; 
+  background: white;
+  position: relative; 
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #00c3ff; 
+  border-bottom: 1px solid #ddd; 
+  z-index: 1;
+  
+}
+
+.header-title h1 {
+  margin: 20px;
+  font-size: 1.5rem;
+  color: #333; 
+}
+
+.login-button button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  color: #ffffff;
+  background-color: #4f46e5; 
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.login-button button:hover {
+  background-color: #4338ca; 
+}
+
+.slideshow-wrapper {
+  display: flex;
+  height: calc(80vh - 60px); /* Adjust based on header height */
+  width: 80vw; 
+  position: relative; 
+}
+
+.slideshow-container {
+  padding: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background-color: white;
+  height: 100%; /* Full height of wrapper */
+  width: 60%; /* Adjust width as needed */
+  position: relative;
+}
+
+.slideshow {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: calc();
+  align-items: calc();
+}
+
+.slideshow-image {
+  width: 80%;
+  height: 80%;
+  object-fit: cover;
+  object-position: calc(); 
+}
+
+.service-description {
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  width: 30%; 
+  text-align: center; 
+  font-size: 1.2rem; 
+  font-weight: bolder; 
+  font-style: initial; 
+  color: #333; 
+  background-color: white; 
+  padding: 1rem;
+  position: absolute;
+  right: 0; 
+  height: 100%; 
+}
+  
