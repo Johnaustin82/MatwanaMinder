@@ -1,8 +1,8 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import './FirstPage.css';
+import './Firstpage.css';
 
-const FirstPage = () => {
+const Firstpage = () => {
   const [currentImageIndex, setCurrentImageIndex] = React.useState(0);
   const navigate = useNavigate();
 
@@ -60,6 +60,6 @@ const FirstPage = () => {
   );
 };
 
-export default FirstPage;
+export default Firstpage;
 
 
