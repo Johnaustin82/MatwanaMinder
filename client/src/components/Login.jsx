@@ -4,9 +4,16 @@ import "./login.css";
 import img4 from "../assets/4.jpeg";
 
 const LoginForm = () => {
+
   const [formData, setFormData] = useState({ email: "", password: "" });
+  
+
   const [error, setError] = useState("");
+  
+
   const [loading, setLoading] = useState(false);
+  
+
   const navigate = useNavigate();
 
   const handleChange = (e) => {
@@ -14,34 +21,42 @@ const LoginForm = () => {
   };
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
-    setLoading(true);
-    setError("");
+    e.preventDefault();  
+    setLoading(true);   
+    setError("");       
 
     try {
+     
       const response = await fetch("http://localhost:5000/auth/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify(formData),  
       });
 
+     
       const data = await response.json();
+
       if (response.ok) {
-        localStorage.setItem("access_token", data.access_token); // Store token securely
-        alert("Login successful!");
-        navigate("/homepage");
+       
+        localStorage.setItem("access_token", data.access_token);
+        alert("Login successful!");  
+        navigate("/homepage"); 
       } else {
+       
         setError(data.message || "Login failed. Please try again.");
       }
     } catch (error) {
+     
       console.error("Error:", error);
       setError("An unexpected error occurred. Please try again.");
     } finally {
+
       setLoading(false);
     }
   };
+
   return (
     <div className="form-container">
       <div className="img">
@@ -49,7 +64,7 @@ const LoginForm = () => {
         <div className="text">
           <h1>LOGIN WITH US!</h1>
           <h2>
-            log in TO ACCESS YOUR ACCOUNT AND ENJOY OUR SEAMLESS TRAVEL SERVICES
+            Log in to access your account and enjoy our seamless travel services
           </h2>
         </div>
       </div>
@@ -68,10 +83,10 @@ const LoginForm = () => {
         <input
           type="password"
           name="password"
-          placeholder="at least 8 characters"
+          placeholder="At least 8 characters"
           value={formData.password}
           onChange={handleChange}
-          required
+          required 
         />
         <p>
           Don't have an account?{" "}
@@ -80,9 +95,9 @@ const LoginForm = () => {
           </Link>
         </p>
         <button type="submit" disabled={loading}>
-          {loading ? "Logging in..." : "Login"}
+          {loading ? "Logging in..." : "Login"}  // Show loading text if processing
         </button>
-        {error && <p style={{ color: "red" }}>{error}</p>}
+        {error && <p style={{ color: "red" }}>{error}</p>}  // Display error message if any
       </form>
     </div>
   );

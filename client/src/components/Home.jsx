@@ -1,17 +1,45 @@
-import React from 'react';
-import { BsBusFrontFill, BsPeopleFill, BsFillBellFill } from 'react-icons/bs';
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, LineChart, Line } from 'recharts';
+import React, { useState, useEffect } from 'react';
 import { FaBook } from 'react-icons/fa';
+import { BsPeopleFill } from 'react-icons/bs';
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, LineChart, Line } from 'recharts';
 
 function Home() {
-  const data = [
-    { name: 'Bus 5', uv: 4000, pv: 2400, amt: 2400 },
-    { name: 'Bus 10', uv: 3000, pv: 1398, amt: 2210 },
-    { name: 'Bus 15', uv: 2000, pv: 9800, amt: 2290 },
-    { name: 'Bus 20', uv: 2780, pv: 3908, amt: 2000 },
-    { name: 'Bus 25', uv: 1890, pv: 4800, amt: 2181 },
-    { name: 'Bus 30', uv: 2390, pv: 3800, amt: 2500 },
-    { name: 'Bus 35', uv: 3490, pv: 4300, amt: 2100 },
+  const [matatus, setMatatus] = useState(0);
+  const [customers, setCustomers] = useState(0);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState('');
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const matatuResponse = await fetch('http://localhost:5000/api/matatus/count');
+        const matatuData = await matatuResponse.json();
+        if (matatuResponse.ok) {
+          setMatatus(matatuData.count);
+        } else {
+          throw new Error('Failed to fetch matatus count');
+        }
+
+        const customerResponse = await fetch('http://localhost:5000/api/users/count');
+        const customerData = await customerResponse.json();
+        if (customerResponse.ok) {
+          setCustomers(customerData.count);
+        } else {
+          throw new Error('Failed to fetch customers count');
+        }
+      } catch (error) {
+        console.error('Error:', error);
+        setError('An error occurred while fetching data');
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+  const chartData = [
+    { name: 'Overview', matatus, customers }
   ];
 
   return (
@@ -20,54 +48,62 @@ function Home() {
         <h3>DASHBOARD</h3>
       </div>
 
-      <div className='main-cards'>
-        <div className='card'>
-          <div className='card-inner'>
-            <h3>Number of matatus</h3>
-            <FaBook className='card_icon' />
-          </div>
-          <h1>0</h1>
-        </div>
-        <div className='card'>
-          <div className='card-inner'>
-            <h3>CUSTOMERS REVIEW</h3>
-            <BsPeopleFill className='card_icon' />
-          </div>
-          <h1>0</h1>
-        </div>
-      </div>
+      {loading ? (
+        <p>Loading...</p>
+      ) : (
+        <>
+          {error && <p style={{ color: 'red' }}>{error}</p>}
 
-      <div className='charts'>
-        <ResponsiveContainer width="100%" height={300}>
-          <BarChart
-            data={data}
-            margin={{ top: 20, right: 20, left: 0, bottom: 5 }}
-          >
-            <CartesianGrid strokeDasharray="3 3" />
-            <XAxis dataKey="name" />
-            <YAxis />
-            <Tooltip />
-            <Legend />
-            <Bar dataKey="pv" fill="#8884d8" />
-            <Bar dataKey="uv" fill="#82ca9d" />
-          </BarChart>
-        </ResponsiveContainer>
+          <div className='main-cards'>
+            <div className='card'>
+              <div className='card-inner'>
+                <h3>Number of Matatus</h3>
+                <FaBook className='card_icon' />
+              </div>
+              <h1>{matatus}</h1>
+            </div>
+            <div className='card'>
+              <div className='card-inner'>
+                <h3>Number of Customers</h3>
+                <BsPeopleFill className='card_icon' />
+              </div>
+              <h1>{customers}</h1>
+            </div>
+          </div>
 
-        <ResponsiveContainer width="100%" height={300}>
-          <LineChart
-            data={data}
-            margin={{ top: 20, right: 20, left: 0, bottom: 5 }}
-          >
-            <CartesianGrid strokeDasharray="3 3" />
-            <XAxis dataKey="name" />
-            <YAxis />
-            <Tooltip />
-            <Legend />
-            <Line type="monotone" dataKey="pv" stroke="#8884d8" activeDot={{ r: 8 }} />
-            <Line type="monotone" dataKey="uv" stroke="#82ca9d" />
-          </LineChart>
-        </ResponsiveContainer>
-      </div>
+          <div className='charts'>
+            <ResponsiveContainer width="100%" height={300}>
+              <BarChart
+                data={chartData}
+                margin={{ top: 20, right: 20, left: 0, bottom: 5 }}
+              >
+                <CartesianGrid strokeDasharray="3 3" />
+                <XAxis dataKey="name" />
+                <YAxis />
+                <Tooltip />
+                <Legend />
+                <Bar dataKey="matatus" fill="#8884d8" name="Matatus" />
+                <Bar dataKey="customers" fill="#82ca9d" name="Customers" />
+              </BarChart>
+            </ResponsiveContainer>
+
+            <ResponsiveContainer width="100%" height={300}>
+              <LineChart
+                data={chartData}
+                margin={{ top: 20, right: 20, left: 0, bottom: 5 }}
+              >
+                <CartesianGrid strokeDasharray="3 3" />
+                <XAxis dataKey="name" />
+                <YAxis />
+                <Tooltip />
+                <Legend />
+                <Line type="monotone" dataKey="matatus" stroke="#8884d8" activeDot={{ r: 8 }} name="Matatus" />
+                <Line type="monotone" dataKey="customers" stroke="#82ca9d" name="Customers" />
+              </LineChart>
+            </ResponsiveContainer>
+          </div>
+        </>
+      )}
     </main>
   );
 }
