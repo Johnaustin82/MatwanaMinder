@@ -1,12 +1,11 @@
 import React from "react";
 import "./HomePage.css";
-// import "./Navbar/navbar.css"
 import Navbar from "./Navbar/Navbar";
 
 function HomePage() {
   return (
     <>
-    <Navbar/>
+      <Navbar />
       {/* <div className="nav">
         <div className="nav-logo">Matwana Minder</div>
         <ul className="nav-menu">
@@ -16,8 +15,10 @@ function HomePage() {
         </ul>
       </div> */}
       <div className="home-page">
-        <div className="Content"style={{ fontSize: '60px', fontWeight: 'bold', textAlign: 'left' }}>
-        <p>"RIDE<br/>SMART,<br/>MANAGE<br/>BETTER:<br/>YOUR<br/>ULTIMATE<br/>MATATU<br/>SOLUTION"</p>
+        <div
+          className="Content"
+        >
+          <span>"RIDE SMART,MANAGE BETTER: YOUR ULTIMATE MATATU SOLUTION"</span>
         </div>
         <div className="image-container">
           <img
@@ -26,6 +27,20 @@ function HomePage() {
           />
         </div>
       </div>
+      <div className="About">
+        
+      </div>
+      <footer>
+        <h2>Contact Us</h2>
+        <p>
+          If you have any questions or need further information, please feel
+          free to contact us at:
+        </p>
+        <p>Email: info@matwanaminder.com</p>
+        <p>Phone: +123 456 7890</p>
+        <p>Address: 123 Transport Lane, Nairobi, Kenya</p>
+      </footer>
+      
     </>
   );
 }
