@@ -43,7 +43,7 @@ const ProfilePage = () => {
                     {profile.photo ? (
                         <img src={profile.photo} alt="Profile" />
                     ) : (
-                        <span>P</span>
+                        <span></span>
                     )}
                 </div>
                 <h2>Profile</h2>
@@ -110,7 +110,6 @@ const ProfilePage = () => {
                             onBlur={handleFieldBlur}
                         >
                             <option value="passenger">Passenger</option>
-                            <option value="operator">Operator</option>
                         </select>
                     </label>
                 </form>
