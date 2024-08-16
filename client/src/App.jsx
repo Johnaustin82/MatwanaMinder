@@ -11,6 +11,12 @@ import OurServices from './components/OurServices';
 import Fleet from './components/Fleet';
 import BusGrid from './components/BusGrid';
 import ProfilePage from './components/ProfilePage';
+import Addmatatu from './components/Addmatatu';
+import Landingpage from './components/Landingpage';
+import Dashboard from './components/Dashboard/Dashboard';
+import ListMatatus from './components/Listmatatu';
+import Review from './components/Review';
+import ViewReviews from './components/ViewReviews';
 
 
 function App() {
@@ -19,16 +25,21 @@ function App() {
      <div>
      <Router>
       <Routes>
-        <Route path="/" element={<LoginForm />} />
+        <Route path='/view-reviews'element={<ViewReviews/>}/>
+        <Route path="/reviews"element={<Review/>}/>
+        <Route path="/login" element={<LoginForm />} />
+        <Route path='/dashboard'element={<Dashboard/>}/>
+        <Route path='/list-matatu'element={<ListMatatus/>}/>
+        <Route path='/'element={<Landingpage/>}/>
         <Route path="/Signup" element={<SignupForm/>} />
         <Route path="/" element={<SignupForm/>} />
         <Route path='/homepage'element={<HomePage/>}/>
         <Route path='/About'element={<AboutUs/>}/>
-        <Route path='/services'element={<OurServices/>}/>
+        {/* <Route path='/services'element={<OurServices/>}/> */}
         <Route path='/fleet'element={<Fleet/>}/>
-        <Route path='/booking'element={<BusGrid/>}/>
+        <Route path='/services'element={<BusGrid/>}/>
         <Route path='/profile'element={<ProfilePage/>}/>
-
+        <Route path='/add-matatu'element={<Addmatatu/>}/>
       </Routes>
     </Router>
      </div>
