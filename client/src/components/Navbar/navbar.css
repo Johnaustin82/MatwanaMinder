@@ -1,38 +1,37 @@
-/* Styles for the Navbar */
 .nav {
-  background-color: #13232f; /* Dark background */
-  padding: 20px; /* Padding around the navbar */
-  display: flex; /* Flexbox for alignment */
-  justify-content: space-between; /* Space between logo and menu */
-  align-items: center; /* Center items vertically */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  background-color: #00c3ff; 
+  padding: 20px; 
+  display: flex; 
+  justify-content: space-between;
+  align-items: center; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
 }
 
 .nav-logo {
-  font-size: 24px; /* Larger text size for the logo */
-  font-weight: bold; /* Bold text for emphasis */
-  color: #ffffff; /* White text color */
-  text-transform: uppercase; /* Uppercase text */
+  font-size: 24px;
+  font-weight: bold; 
+  color: black; 
+  text-transform: uppercase;
 }
 
 .nav-menu {
-  list-style: none; /* Remove default list styling */
-  display: flex; /* Flexbox for horizontal layout */
-  margin: 0; /* Remove default margin */
-  padding: 0; /* Remove default padding */
+  list-style: none; 
+  display: flex; 
+  margin: 0; 
+  padding: 0; 
 }
 
 .nav-menu li {
-  margin-left: 20px; /* Space between menu items */
+  margin-left: 20px; 
 }
 
 .nav-menu li a {
-  text-decoration: none; /* Remove underline */
-  color: #ffffff; /* White text color */
-  font-size: 18px; /* Set font size */
-  transition: color 0.3s ease; /* Smooth transition for hover effect */
+  text-decoration: none;
+  color: black; 
+  font-size: 18px; 
+  transition: color 0.3s ease; 
 }
 
 .nav-menu li a:hover {
-  color: #1ab188; /* Change color on hover */
+  color: #1ab188; 
 }

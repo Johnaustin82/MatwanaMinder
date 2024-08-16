@@ -8,7 +8,7 @@ const Navbar = () => {
         <div className="nav-logo">Matwana Minder</div>
         <ul className="nav-menu">
         <li><Link to='/About'>About us</Link></li>
-        <li><Link to='/services'>Our services</Link></li>
+        <li><Link to='/services'>Our matatus</Link></li>
         <li><Link to='/Profile'>Profile</Link></li>
         </ul>
 
