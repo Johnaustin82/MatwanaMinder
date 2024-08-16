@@ -79,3 +79,12 @@ class Review(db.Model):
             "rating": self.rating,
             "comments": self.comments
         }
+    
+class Review(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    rating = db.Column(db.Integer, nullable=False) 
+    review_text = db.Column(db.Text, nullable=True)  
+
+    def _init_(self, rating, review_text=None):
+        self.rating = rating
+        self.review_text = review_text
