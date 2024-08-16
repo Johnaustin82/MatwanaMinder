@@ -1,7 +1,46 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './TicketsPage.css';
 
-const TicketsPage = ({ tickets, onDeleteTicket, onBack }) => {
+const TicketsPage = ({ onBack }) => {
+    const [tickets, setTickets] = useState([]);
+    const navigate = useNavigate();
+
+    useEffect(() => {
+        const fetchTickets = async () => {
+            try {
+                const email = localStorage.getItem('email'); 
+                const response = await fetch(`http://localhost:5000/tickets?email=${email}`);
+                const data = await response.json();
+                setTickets(data);
+            } catch (error) {
+                console.error("Error fetching tickets:", error);
+            }
+        };
+
+        fetchTickets();
+    }, []);
+
+    const handleReview = () => {
+        navigate('/reviews');
+    };
+
+    const handleDelete = async (ticketId) => {
+        try {
+            const response = await fetch(`http://localhost:5000/tickets/${ticketId}`, {
+                method: 'DELETE',
+            });
+
+            if (response.ok) {
+                setTickets(tickets.filter(ticket => ticket.id !== ticketId));
+            } else {
+                console.error("Failed to delete ticket");
+            }
+        } catch (error) {
+            console.error("Error deleting ticket:", error);
+        }
+    };
+
     return (
         <div className="tickets-page">
             <h2>Your Booked Tickets</h2>
@@ -12,12 +51,10 @@ const TicketsPage = ({ tickets, onDeleteTicket, onBack }) => {
                 <ul>
                     {tickets.map(ticket => (
                         <li key={ticket.id}>
-                            <p>Bus: {ticket.busName}</p>
-                            <p>From: {ticket.from}</p>
-                            <p>To: {ticket.to}</p>
                             <p>Date: {ticket.travelDate}</p>
                             <p>Time: {ticket.travelTime}</p>
-                            <button onClick={() => onDeleteTicket(ticket.id)}>Cancel Ticket</button>
+                            <button onClick={handleReview}>Review your ride</button>
+                            <button onClick={() => handleDelete(ticket.id)}>Cancel Ticket</button>
                         </li>
                     ))}
                 </ul>
