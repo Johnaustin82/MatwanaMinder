@@ -7,8 +7,6 @@ import LoginForm from './components/Login'
 import SignupForm from './components/Sign';
 import HomePage from './components/HomePage';
 import AboutUs from './components/AboutUs'
-import OurServices from './components/OurServices';
-import Fleet from './components/Fleet';
 import BusGrid from './components/BusGrid';
 import ProfilePage from './components/ProfilePage';
 import Addmatatu from './components/Addmatatu';
@@ -35,8 +33,6 @@ function App() {
         <Route path="/" element={<SignupForm/>} />
         <Route path='/homepage'element={<HomePage/>}/>
         <Route path='/About'element={<AboutUs/>}/>
-        {/* <Route path='/services'element={<OurServices/>}/> */}
-        <Route path='/fleet'element={<Fleet/>}/>
         <Route path='/services'element={<BusGrid/>}/>
         <Route path='/profile'element={<ProfilePage/>}/>
         <Route path='/add-matatu'element={<Addmatatu/>}/>
