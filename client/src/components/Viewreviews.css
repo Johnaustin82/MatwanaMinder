@@ -1,0 +1,18 @@
+.reviews-list {
+    padding: 20px;
+  }
+  
+  .review-item {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .review-item h3 {
+    margin: 0 0 5px;
+  }
+  
+  .review-item p {
+    margin: 5px 0;
+  }
+  
