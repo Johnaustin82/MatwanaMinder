@@ -1,5 +1,5 @@
 .profile-container {
-    background-color: #ace0e4; 
+    background-color: #24b5d2; 
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
@@ -22,7 +22,7 @@
     width: 100px; 
     height: 100px;
     border-radius: 50%; 
-    background-color: #2b5350; 
+    background-color: rgb(128, 128, 128); 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -42,7 +42,7 @@
 }
 
 .edit-photo-button {
-    background-color: #00796b;
+    background-color:grey;
     color: white;
     padding: 8px 16px; 
     border: none;
@@ -92,7 +92,7 @@
 
 .profile-details input:focus,
 .profile-details select:focus {
-    background-color: white;
+    background-color: grey;
     cursor: text;
 }
 
