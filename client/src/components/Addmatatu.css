@@ -1,46 +1,61 @@
+/* General styling for the form container */
 .bus-registration-form {
-	max-width: 600px;
-	margin: 0 auto;
+	max-width: 500px;
+	margin: 40px auto;
 	padding: 20px;
-	border: 1px solid #ccc;
-	border-radius: 10px;
-	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+	border: 1px solid #ddd;
+	border-radius: 8px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+	background-color: #fff;
   }
   
-  .bus-registration-form h1 {
+  h2 {
 	text-align: center;
 	margin-bottom: 20px;
+	color: #333;
   }
   
+  /* Styling for form groups */
   .form-group {
-	margin-bottom: 15px;
-  }
-  
-  .form-group label {
 	display: block;
-	margin-bottom: 5px;
-	font-weight: bold;
-  }
-  
-  .form-group input {
 	width: 100%;
+	margin-bottom: 15px;
 	padding: 8px;
-	box-sizing: border-box;
+	font-size: 16px;
 	border: 1px solid #ccc;
-	border-radius: 5px;
+	border-radius: 4px;
+	transition: border-color 0.3s;
   }
   
-  button {
+  /* Focus effect for form inputs */
+  .form-group:focus {
+	border-color: #0066cc;
+	outline: none;
+  }
+  
+  /* Styling for the submit button */
+  .BTN {
+	display: block;
 	width: 100%;
 	padding: 10px;
-	background-color: #00c3ff;
-	color: white;
+	font-size: 16px;
+	font-weight: bold;
+	background-color: #007bff;
+	color: #fff;
 	border: none;
-	border-radius: 5px;
+	border-radius: 4px;
 	cursor: pointer;
+	transition: background-color 0.3s;
   }
   
-  button:hover {
+  .BTN:hover {
 	background-color: #0056b3;
+  }
+  
+  p {
+	text-align: center;
+	font-size: 14px;
+	color: #006600;
+	margin-top: 10px;
   }
   
