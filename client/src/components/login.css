@@ -34,7 +34,6 @@
   height: 100vh;
   object-fit: cover;
   position: absolute;
-  /* margin-top: 49px; */
   margin-left: -550px;
   filter: brightness(60%);
 }

@@ -19,7 +19,7 @@ const LoginForm = () => {
     setError("");
 
     try {
-      const response = await fetch("http://localhost:5000/auth/login", {
+      const response = await fetch("http://localhost:5000/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -29,9 +29,20 @@ const LoginForm = () => {
 
       const data = await response.json();
       if (response.ok) {
-        localStorage.setItem("access_token", data.access_token); // Store token securely
+        localStorage.setItem("access_token", data.access_token);
+        localStorage.setItem("userId", data.userId); 
+        localStorage.setItem("role", data.role); 
+        localStorage.setItem("email",data.email)
+
         alert("Login successful!");
-        navigate("/homepage");
+
+        if (data.role === "operator") {
+          navigate("/dashboard");
+        } else if (data.role === "passenger") {
+          navigate("/homepage");
+        } else {
+          setError("Unknown user role.");
+        }
       } else {
         setError(data.message || "Login failed. Please try again.");
       }
@@ -42,6 +53,7 @@ const LoginForm = () => {
       setLoading(false);
     }
   };
+
   return (
     <div className="form-container">
       <div className="img">
@@ -49,7 +61,7 @@ const LoginForm = () => {
         <div className="text">
           <h1 className="H1">LOGIN WITH US!</h1>
           <h2 className="H2">
-            log in TO ACCESS YOUR ACCOUNT AND ENJOY OUR SEAMLESS TRAVEL SERVICES
+            LOGIN TO ACCESS OUR SEAMLESS SERVICES
           </h2>
         </div>
       </div>
@@ -91,3 +103,4 @@ const LoginForm = () => {
 };
 
 export default LoginForm;
+
