@@ -62,7 +62,7 @@ const AboutUs = () => {
             ))}
           </div>
         </div>
-        <div className="contact-us-section">
+        {/* <div className="contact-us-section">
           <h2>Contact Us</h2>
           <p>
             If you have any questions or need further information, please feel
@@ -71,7 +71,7 @@ const AboutUs = () => {
           <p>Email: info@matwanaminder.com</p>
           <p>Phone: +123 456 7890</p>
           <p>Address: 123 Transport Lane, Nairobi, Kenya</p>
-        </div>
+        </div> */}
       </div>
     </div>
   );
