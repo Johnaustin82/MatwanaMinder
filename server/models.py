@@ -1,7 +1,6 @@
 from flask_sqlalchemy import SQLAlchemy
 from flask_bcrypt import Bcrypt
 from flask_jwt_extended import JWTManager
-import os
 
 db = SQLAlchemy()
 bcrypt = Bcrypt()
@@ -13,8 +12,11 @@ class User(db.Model):
     email = db.Column(db.String(120), unique=True, nullable=False)
     password = db.Column(db.String(60), nullable=False)
     role = db.Column(db.String(20), nullable=False)
+    
+    vehicles = db.relationship('Vehicle', order_by='Vehicle.id', back_populates='operator')
+    tickets = db.relationship('Ticket', back_populates='user')
 
-    def _init_(self, name, email, password, role):
+    def __init__(self, name, email, password, role):
         self.name = name
         self.email = email
         self.password = bcrypt.generate_password_hash(password).decode('utf-8')
@@ -23,43 +25,74 @@ class User(db.Model):
     def check_password(self, password):
         return bcrypt.check_password_hash(self.password, password)
     
+    
+    
+    
 class Vehicle(db.Model):
-    _tablename_ = 'vehicles'
+    __tablename__ = 'vehicles'
 
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
     license_plate = db.Column(db.String(15), unique=True, nullable=False)
     model = db.Column(db.String(50), nullable=False)
     capacity = db.Column(db.Integer, nullable=False)
     operator_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
-    mileage = db.Column(db.Integer, nullable=False)
+    mileage = db.Column(db.Integer, nullable=True)  
     route = db.Column(db.String(100), nullable=False)
     price = db.Column(db.Numeric(10, 2), nullable=False)
     image_url = db.Column(db.String(255), nullable=True)
 
-    # Relationship to the User model
     operator = db.relationship('User', back_populates='vehicles')
+    tickets = db.relationship('Ticket', back_populates='vehicle')
 
-    def _repr_(self):
+    def __repr__(self):
         return f"<Vehicle {self.license_plate} - {self.model}>"
+    
+    def to_dict(self):
+        """Convert the Vehicle instance to a dictionary."""
+        return {
+            "id": self.id,
+            "license_plate": self.license_plate,
+            "model": self.model,
+            "capacity": self.capacity,
+            "operator_id": self.operator_id,
+            "mileage": self.mileage,
+            "route": self.route,
+            "price": float(self.price),  
+            "image_url": self.image_url
+        }
 
-# Add a relationship in the User model to link vehicles
-User.vehicles = db.relationship('Vehicle', order_by=Vehicle.id, back_populates='operator')  
-
+User.vehicles = db.relationship('Vehicle', order_by=Vehicle.id, back_populates='operator')
 
 class Ticket(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    busName = db.Column(db.String(100), nullable=False)
-    from_ = db.Column(db.String(100), nullable=False)
-    to = db.Column(db.String(100), nullable=False)
-    travelDate = db.Column(db.String(10), nullable=False)
-    travelTime = db.Column(db.String(10), nullable=False)
+    __tablename__ = 'tickets'
+
+    id = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    travel_date = db.Column(db.Date, nullable=False)
+    travel_time = db.Column(db.Time, nullable=False)
+    user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False) 
+    vehicle_id = db.Column(db.Integer, db.ForeignKey('vehicles.id'), nullable=False)  
+
+    user = db.relationship('User', back_populates='tickets')
+    vehicle = db.relationship('Vehicle', back_populates='tickets')  
 
     def to_dict(self):
         return {
-            "id": self.id,
-            "busName": self.busName,
-            "from": self.from_,
-            "to": self.to,
-            "travelDate": self.travelDate,
-            "travelTime": self.travelTime
+            'id': self.id,
+            'travelDate': self.travel_date.isoformat(),
+            'travelTime': self.travel_time.strftime("%H:%M:%S"),
+            'email': self.user.email if self.user else None, 
+            'vehicleId': self.vehicle_id
         }
+
+class Review(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    rating = db.Column(db.Integer, nullable=False)
+    review_text = db.Column(db.String, nullable=True)
+    email = db.Column(db.String, nullable=False)  # New field
+
+    def __init__(self, rating, review_text, email):
+        self.rating = rating
+        self.review_text = review_text
+        self.email = email
+
+
