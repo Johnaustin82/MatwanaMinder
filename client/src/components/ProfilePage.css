@@ -73,7 +73,7 @@
     border: 1px solid #b2dfdb;
     border-radius: 4px;
     width: 100%;
-    max-width: 400px; /* Limit the width of input fields */
+    max-width: 400px; 
     cursor: pointer;
 }
 
