@@ -5,14 +5,14 @@ const Listmatatu = () => {
     const [vehicles, setVehicles] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/vehicles')
+        fetch('https://matwanaminder-7.onrender.com/vehicles')
             .then(response => response.json())
             .then(data => setVehicles(data))
             .catch(error => console.error("There was an error fetching the vehicles!", error));
     }, []);
 
     const handleDelete = (id) => {
-        fetch(`http://localhost:5000/vehicles/${id}`, {
+        fetch(`https://matwanaminder-7.onrender.com/vehicles/${id}`, {
             method: 'DELETE',
         })
             .then(response => response.json())
@@ -24,7 +24,7 @@ const Listmatatu = () => {
     };
 
     const handleUpdate = (id, updatedData) => {
-        fetch(`http://localhost:5000/vehicles/${id}`, {
+        fetch(`https://matwanaminder-7.onrender.com/vehicles/${id}`, {
             method: 'PATCH',
             headers: {
                 'Content-Type': 'application/json',

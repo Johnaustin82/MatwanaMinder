@@ -186,7 +186,7 @@ export default function Review() {
       email: email  
     };
 
-    fetch('http://localhost:5000/reviews', {  
+    fetch('https://matwanaminder-7.onrender.com/reviews', {  
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

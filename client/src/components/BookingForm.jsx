@@ -33,7 +33,7 @@ const BookingForm = ({ bus, onClose, onBookTicket }) => {
         };
 
         try {
-            const response = await fetch('http://localhost:5000/tickets', {
+            const response = await fetch('https://matwanaminder-7.onrender.com/tickets', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

@@ -297,7 +297,7 @@ const RegisterMatatu = () => {
     e.preventDefault();
     
     try {
-      const response = await fetch('http://localhost:5000/vehicle/register-matatu', {
+      const response = await fetch('https://matwanaminder-7.onrender.com/vehicle/register-matatu', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

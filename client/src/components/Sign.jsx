@@ -24,8 +24,8 @@ const SignupForm = () => {
     setError('');
   
     try {
-      console.log(formData); // Log formData to check its content
-      const response = await fetch('http://localhost:5000/signup', {
+      console.log(formData); 
+      const response = await fetch('https://matwanaminder-7.onrender.com/signup', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

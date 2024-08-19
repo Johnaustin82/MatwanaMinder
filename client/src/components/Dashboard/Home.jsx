@@ -90,11 +90,11 @@ function Home() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const vehicleResponse = await fetch('http://localhost:5000/vehicles/count');
+        const vehicleResponse = await fetch('https://matwanaminder-7.onrender.com/vehicles/count');
         const vehicleData = await vehicleResponse.json();
         setVehicleCount(vehicleData.count);
 
-        const reviewResponse = await fetch('http://localhost:5000/reviews/count');
+        const reviewResponse = await fetch('https://matwanaminder-7.onrender.com/reviews/count');
         const reviewData = await reviewResponse.json();
         setReviewCount(reviewData.count);
       } catch (error) {

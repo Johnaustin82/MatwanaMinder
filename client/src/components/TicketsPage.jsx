@@ -10,7 +10,7 @@ const TicketsPage = ({ onBack }) => {
         const fetchTickets = async () => {
             try {
                 const email = localStorage.getItem('email'); 
-                const response = await fetch(`http://localhost:5000/tickets?email=${email}`);
+                const response = await fetch(`https://matwanaminder-7.onrender.com/tickets?email=${email}`);
                 const data = await response.json();
                 setTickets(data);
             } catch (error) {
@@ -27,7 +27,7 @@ const TicketsPage = ({ onBack }) => {
 
     const handleDelete = async (ticketId) => {
         try {
-            const response = await fetch(`http://localhost:5000/tickets/${ticketId}`, {
+            const response = await fetch(`https://matwanaminder-7.onrender.com/tickets/${ticketId}`, {
                 method: 'DELETE',
             });
 

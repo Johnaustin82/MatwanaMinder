@@ -11,7 +11,7 @@ const BusGrid = () => {
   const [viewTickets, setViewTickets] = useState(false);
 
   useEffect(() => {
-    fetch("http://localhost:5000/vehicles")
+    fetch("https://matwanaminder-7.onrender.com/vehicles")
       .then((response) => {
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
